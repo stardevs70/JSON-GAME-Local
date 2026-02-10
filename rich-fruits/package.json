@@ -1,0 +1,17 @@
+{
+  "name": "rich-fruits",
+  "version": "1.0.0",
+  "description": "Rich Fruits - 5-reel slot game (local development build)",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "format": "npx js-beautify -r static/compressed_js/games/rich-fruits/js/8e51b4b435aacf5477e30763c88aea12.js && npx prettier --write \"**/*.{js,css,html,json,md}\" --ignore-path .prettierignore"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "js-beautify": "^1.15.0",
+    "prettier": "^3.4.0"
+  }
+}

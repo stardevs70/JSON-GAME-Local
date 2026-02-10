@@ -1,0 +1,12 @@
+{
+  "name": "hot-sevens-local",
+  "version": "1.0.0",
+  "description": "Hot Sevens - Local Mock Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

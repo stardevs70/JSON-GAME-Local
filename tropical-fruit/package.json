@@ -1,0 +1,12 @@
+{
+  "name": "tropical-fruits-local",
+  "version": "1.0.0",
+  "description": "Tropical Fruits - Local Mock Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
