@@ -184,43 +184,41 @@ app.get("/menu/", (req, res) => {
   res.redirect("/");
 });
 
-// 20 payline definitions: each array = [reel1_row, reel2_row, reel3_row, reel4_row, reel5_row]
-// Row 1=top, 2=middle, 3=bottom
+// Hot Slot is a 3-reel, 3-row game with 17 paylines
+// Each array = [reel1_row, reel2_row, reel3_row], Row 1=top, 2=middle, 3=bottom
+const NUM_REELS = 3;
+const NUM_SYMBOLS = 8;
 const PAYLINES = [
-  [2, 2, 2, 2, 2], // line 1  - middle
-  [1, 1, 1, 1, 1], // line 2  - top
-  [3, 3, 3, 3, 3], // line 3  - bottom
-  [1, 2, 3, 2, 1], // line 4  - V down
-  [3, 2, 1, 2, 3], // line 5  - V up
-  [2, 1, 1, 1, 2], // line 6
-  [2, 3, 3, 3, 2], // line 7
-  [1, 1, 2, 3, 3], // line 8
-  [3, 3, 2, 1, 1], // line 9
-  [2, 1, 2, 3, 3], // line 10
-  [2, 3, 2, 3, 2], // line 11
-  [2, 1, 2, 1, 2], // line 12
-  [1, 2, 1, 2, 1], // line 13
-  [3, 2, 3, 2, 3], // line 14
-  [2, 2, 1, 2, 2], // line 15
-  [2, 2, 3, 2, 2], // line 16
-  [1, 1, 2, 1, 1], // line 17
-  [3, 3, 2, 3, 3], // line 18
-  [1, 2, 2, 2, 1], // line 19
-  [3, 2, 2, 2, 3], // line 20
+  [2, 2, 2], // line 1  - middle
+  [1, 1, 1], // line 2  - top
+  [3, 3, 3], // line 3  - bottom
+  [1, 2, 3], // line 4  - diagonal down
+  [3, 2, 1], // line 5  - diagonal up
+  [1, 2, 1], // line 6
+  [3, 2, 3], // line 7
+  [2, 1, 2], // line 8
+  [2, 3, 2], // line 9
+  [3, 2, 2], // line 10
+  [1, 2, 2], // line 11
+  [2, 3, 3], // line 12
+  [2, 1, 1], // line 13
+  [2, 2, 3], // line 14
+  [2, 2, 1], // line 15
+  [3, 3, 2], // line 16
+  [1, 1, 2], // line 17
 ];
 
-// Win table: multipliers per symbol per match count
-// Symbol IDs 1-8 must match init.json win_table
+// Win table: 8 symbols, 3-reel game (max match = 3)
 // Symbol 7 is the only one that wins with 2+ matches
 const WIN_TABLE = {
-  1: { 3: 20, 4: 50, 5: 200 },
-  2: { 3: 15, 4: 50, 5: 200 },
-  3: { 3: 10, 4: 50, 5: 200 },
-  4: { 3: 15, 4: 50, 5: 200 },
-  5: { 3: 10, 4: 50, 5: 100 },
-  6: { 3: 5, 4: 50, 5: 100 },
-  7: { 2: 5, 3: 15, 4: 50, 5: 100 }, // only symbol that wins with 2+
-  8: { 3: 15, 4: 50, 5: 100 },        // scatter
+  1: { 3: 20 },
+  2: { 3: 15 },
+  3: { 3: 10 },
+  4: { 3: 15 },
+  5: { 3: 10 },
+  6: { 3: 5 },
+  7: { 2: 5, 3: 15 }, // only symbol that wins with 2+
+  8: { 3: 15 },       // scatter
 };
 
 const SCATTER_SYMBOL = 8; // x
@@ -230,7 +228,7 @@ const SPECIAL_SYMBOLS = [1, 8]; // seven and x: max 1 per column
 function generateSpinResponse(params) {
   const bet = (params && params.bet) || 100;
   const den = (params && params.den) || 1;
-  const lines = (params && params.lines) || 20;
+  const lines = (params && params.lines) || 17;
 
   // Deduct bet from credit
   credit -= bet;
@@ -238,17 +236,16 @@ function generateSpinResponse(params) {
 
   const betPerLine = bet / lines;
 
-  // Generate random symbols for 5 reels, 3 visible positions each
-  // Rule: symbols 1 (seven) and 8 (x) appear at most ONCE per column
+  // Generate random symbols for 3 reels, 3 visible positions each
   const symbols = {};
-  for (let reel = 1; reel <= 5; reel++) {
+  for (let reel = 1; reel <= NUM_REELS; reel++) {
     symbols[reel] = {};
     symbols[reel].pos = Math.floor(Math.random() * 24) + 1;
     const usedSpecial = new Set();
     for (let row = 1; row <= 3; row++) {
       let sym;
       do {
-        sym = Math.floor(Math.random() * 8) + 1;
+        sym = Math.floor(Math.random() * NUM_SYMBOLS) + 1;
       } while (SPECIAL_SYMBOLS.includes(sym) && usedSpecial.has(sym));
       if (SPECIAL_SYMBOLS.includes(sym)) usedSpecial.add(sym);
       symbols[reel][row] = sym;
@@ -264,12 +261,12 @@ function generateSpinResponse(params) {
     const payline = PAYLINES[lineIdx];
     const firstSym = symbols[1][payline[0]];
 
-    // Skip scatter symbol - scatter wins are checked separately
+    // Skip scatter symbol
     if (firstSym === SCATTER_SYMBOL) continue;
 
-    // Count consecutive matching symbols from left
+    // Count consecutive matching symbols from left across 3 reels
     let matchCount = 1;
-    for (let reel = 2; reel <= 5; reel++) {
+    for (let reel = 2; reel <= NUM_REELS; reel++) {
       if (symbols[reel][payline[reel - 1]] === firstSym) {
         matchCount++;
       } else {
