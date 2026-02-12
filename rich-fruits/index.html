@@ -698,6 +698,22 @@
       />
     </audio>
 
+                <script type="text/javascript">
+                    // Debug: catch JS errors to diagnose spin freeze
+                    var _errLog = [];
+                    window.onerror = function(msg, src, line, col, err) {
+                        var e = line + ':' + col + ' ' + msg;
+                        _errLog.push(e);
+                        var d = document.getElementById('_errBox');
+                        if (!d) {
+                            d = document.createElement('div');
+                            d.id = '_errBox';
+                            d.style.cssText = 'position:fixed;top:0;left:0;right:0;background:rgba(255,0,0,0.9);color:#fff;font:12px monospace;padding:4px 8px;z-index:99999;max-height:30%;overflow:auto;';
+                            document.body.appendChild(d);
+                        }
+                        d.innerHTML = _errLog.map(function(x){return x;}).join('<br>');
+                    };
+                </script>
     <script
       type="text/javascript"
       src="/static/compressed_js/games/rich-fruits/js/8e51b4b435aacf5477e30763c88aea12.js"

@@ -65,6 +65,9 @@ const closeResponse = require("./mocks/close.json");
 const infoResponse = require("./mocks/info.json");
 const selectBonusResponse = require("./mocks/select_bonus_symbol.json");
 
+// Load bars (reel strips) from init.json for consistent symbol generation
+const BARS = initResponse.result[0].data.bars;
+
 // Main game API endpoint - all game functions POST here
 app.post("/gp2/app/", (req, res) => {
   let body = req.body;
@@ -234,6 +237,14 @@ const WIN_TABLE = {
 const SCATTER_SYMBOL = 9; // star
 const SPECIAL_SYMBOLS = [1, 9]; // seven and star: max 1 per column
 
+// Helper: get symbol from bars at position (1-based, wraps around 24)
+function getBarSymbol(reel, position) {
+  const reelBars = BARS[String(reel)];
+  const barLen = Object.keys(reelBars).length;
+  const wrappedPos = ((position - 1) % barLen) + 1;
+  return reelBars[String(wrappedPos)];
+}
+
 // Generate randomized spin result
 function generateSpinResponse(params) {
   const bet = (params && params.bet) || 100;
@@ -246,19 +257,14 @@ function generateSpinResponse(params) {
 
   const betPerLine = bet / lines;
 
-  // Generate random symbols for 3 reels, 3 visible positions each
+  // Generate symbols by picking random positions on the reel strips (bars)
+  // This ensures symbols are consistent with pos and bars data
   const symbols = {};
   for (let reel = 1; reel <= NUM_REELS; reel++) {
-    symbols[reel] = {};
-    symbols[reel].pos = Math.floor(Math.random() * 24) + 1;
-    const usedSpecial = new Set();
+    const pos = Math.floor(Math.random() * 24) + 1;
+    symbols[reel] = { pos: pos };
     for (let row = 1; row <= 3; row++) {
-      let sym;
-      do {
-        sym = Math.floor(Math.random() * NUM_SYMBOLS) + 1;
-      } while (SPECIAL_SYMBOLS.includes(sym) && usedSpecial.has(sym));
-      if (SPECIAL_SYMBOLS.includes(sym)) usedSpecial.add(sym);
-      symbols[reel][row] = sym;
+      symbols[reel][row] = getBarSymbol(reel, pos + row - 1);
     }
   }
 
@@ -331,6 +337,9 @@ function generateSpinResponse(params) {
           symbols: symbols,
           win: totalWin,
           state: "main",
+          free_count: 0,
+          free_played: 0,
+          bonus_symbol: false,
           log: log,
           card: 0,
           double: { step: 0 },
