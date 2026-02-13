@@ -1,0 +1,865 @@
+@charset "utf-8";
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#gameOverlay{
+}
+#wrapper{}
+#gameSection{
+    height: 100%;
+    width: 100%;
+
+    /*visibility: hidden;*/
+
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    background: url("/static/games/slots/casino-world/style/images/back-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 1);
+}
+#gameSection.originalSize{}
+#gameSection.scaledSize{}
+/* Game Top */
+#gT{}
+/* Game Top End*/
+
+/* Game Middle */
+#gM{
+    height: 493px;
+    left: 50%;
+    margin: 0 0 0 -355px;
+    overflow: hidden;
+    position: absolute;
+    width: 710px;
+
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+#barsArea{
+    height: 100%;
+    position: relative;
+}
+#barsHeader{
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+#barsHeader,
+#stdHead,
+#freeHead{
+    height: 94px;
+    width: 710px;
+}
+
+#stdHead,
+#freeHead,
+#barsSidesStd,
+#barsSidesFree,
+.stdSep,
+.freeSep,
+#fHCrw{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -moz-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    -webkit-transition: all 300ms linear 0s;
+    -ms-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+}
+
+#fHCrw{
+    background: url("/static/games/slots/casino-world/style/images/free-crown.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 88px;
+    width: 477px;
+    position: absolute;
+    top: -88px;
+    left: 50%;
+    margin: 0 0 0 -238px;
+}
+.freeStt #fHCrw{
+    top: 0;
+}
+#fHCrwWr{
+    display: table-cell;
+    height: 75px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 477px;
+}
+#fHCrwWinSTR,
+#fHCrwCnt,
+#fHCrwCnt{
+    color: #8E0091;
+    font: bold 22px/100% Arial Black,Arial,Gadget, sans-serif;
+    text-shadow: 1px 0 rgba(255,236,32, 1), 1px 1px rgba(255,236,32, 1), 0 1px rgba(255,236,32, 1), -1px 1px rgba(255,236,32, 1), -1px 0 rgba(255,236,32, 1), -1px -1px rgba(255,236,32, 1), 0 -1px rgba(255,236,32, 1), 1px -1px rgba(255,236,32, 1);
+}
+#fHCrwWinSTR{}
+#fHCrwCnt{}
+#fHCrwCnt{
+
+}
+
+#stdHead{
+    background: url("/static/games/slots/casino-world/style/images/logo-back.png") no-repeat scroll 51px 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#freeHead{
+    background: url("/static/games/slots/casino-world/style/images/top-back-free.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #stdHead{
+    opacity: 0;
+}
+.freeStt #freeHead{
+    opacity: 1;
+}
+
+#lghMove{
+    background: url("/static/games/slots/casino-world/style/images/shine.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 88px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 48px;
+}
+#hdTop{
+    background: url("/static/games/slots/casino-world/style/images/top-back.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 94px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#lftCube{
+    background: url("/static/games/slots/casino-world/style/images/left-cube.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: -46px;
+    width: 122px;
+    height: 88px;
+}
+#rgtCube{
+    background: url("/static/games/slots/casino-world/style/images/right-cube.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 636px;
+    width: 115px;
+    height: 88px;
+}
+
+#barsWrapper{
+    height: 386px;
+    left: 0;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    z-index: 2;
+}
+#barsSides{
+    z-index: 2;
+}
+#barsSides,
+#barsSidesStd,
+#barsSidesFree,
+#lLWr{
+    height: 386px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#barsSidesStd{
+    background: url("/static/games/slots/casino-world/style/images/sides.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#barsSidesFree{
+    background: url("/static/games/slots/casino-world/style/images/sides-free.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #barsSidesStd{
+    opacity: 0;
+}
+.freeStt #barsSidesFree{
+    opacity: 1;
+}
+
+#barsCanvasWr{
+    height: 378px;
+    left: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 4px;
+    width: 698px;
+    z-index: 1;
+}
+
+.barsSeparator{
+    height: 378px;
+    position: absolute;
+    top: 0;
+    width: 17px;
+}
+.stdSep, .freeSep{
+    height: inherit;
+    width: inherit;
+}
+.smpBr, .stdBrBck, .freeBrBck{
+    position: absolute;
+    top: 0;
+    height: 378px;
+    width: 126px;
+}
+
+.stdBrBck{
+    background: url("/static/games/slots/casino-world/style/images/bar-back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+.freeBrBck{
+    background: url("/static/games/slots/casino-world/style/images/bar-back-free.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt .stdBrBck{
+    opacity: 0;
+}
+.freeStt .freeBrBck{
+    opacity: 1;
+}
+
+#fstBr{
+    left: 0;
+}
+#sndBr{
+    left: 143px;
+}
+#thdBr{
+    left: 286px;
+}
+#frtBr{
+    left: 429px;
+}
+#fthBr{
+    left: 572px;
+}
+
+#fstSep{
+    left: 126px;
+}
+#sndSep{
+    left: 269px;
+}
+#thdSep{
+    left: 412px;
+}
+#frhSep{
+    left: 555px;
+}
+.stdSep{
+    background: url("/static/games/slots/casino-world/style/images/bar-separator.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+.freeSep{
+    background: url("/static/games/slots/casino-world/style/images/bar-separator.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt .stdSep{
+    opacity: 0;
+}
+.freeStt .freeSep{
+    opacity: 1;
+}
+#barsCanvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#barsBot{
+    top: 472px;
+}
+#barsBot,
+#barsBotStd,
+#barsBotFree{
+    position: absolute;
+    width: 710px;
+    height: 21px;
+}
+#barsBotStd,
+#barsBotFree{
+    top: 0;
+}
+#barsBotStd{
+    background: url("/static/games/slots/casino-world/style/images/down-bar.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#barsBotFree{
+    background: url("/static/games/slots/casino-world/style/images/down-bar-free.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+.freeStt #barsBotStd{
+    opacity: 0;
+}
+.freeStt #barsBotFree{
+    opacity: 1;
+}
+/* Game Middle End */
+
+/* Game Bottom */
+#gB{
+
+}
+#dP{
+
+}
+/* Game Bottom End */
+/* Line Lamps */
+#lLWr{
+    z-index: 2;
+    /*top: 82px;*/
+    top: 0;
+}
+
+#lSLL,
+#rSLL{
+    position: absolute;
+    top: 0;
+    width: 41px;
+    height: 100%;
+}
+#lSLL{
+    left: 0;
+}
+#rSLL{
+    right: 0;
+}
+.sLL{
+    background: url("/static/games/slots/casino-world/style/images/lampsSprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 38px;
+    position: absolute;
+    width: 41px;
+}
+.sLLAct{}
+.sLLACWR,
+.sLLAC{
+    height: 38px;
+    width: 41px;
+}
+.sLLACWR{
+    background: url("/static/games/slots/casino-world/style/images/lampsSprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sLLAct .sLLACWR{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sLLAC{
+    display: none;
+}
+.sLLAct .sLLAC{
+    font: 24px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: #000;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    text-shadow: 1px 0 rgba(255, 255, 255, .6), 1px 1px rgba(255, 255, 255, .6), 0 1px rgba(255, 255, 255, .6), -1px 1px rgba(255, 255, 255, .6), -1px 0 rgba(255, 255, 255, .6), -1px -1px rgba(255, 255, 255, .6), 0 -1px rgba(255, 255, 255, .6), 1px -1px rgba(255, 255, 255, .6);
+    /*text-shadow: #fff 1px 0, #fff 1px 1px, #fff 0 1px, #fff -1px 1px, #fff -1px 0, #fff -1px -1px, #fff 0 -1px, #fff 1px -1px*/
+}
+#lL0{
+    background-position: -41px 0;
+}
+#lL1{
+    background-position: -82px 0;
+}
+#lL2{
+    background-position: -123px 0;
+}
+#lL3{
+    background-position: -164px 0;
+}
+#lL4{
+    background-position: -205px 0;
+}
+#lL5{
+    background-position: -246px 0;
+}
+#lL6{
+    background-position: -287px 0;
+}
+#lL7{
+    background-position: -328px 0;
+}
+#lL8{
+    background-position: -369px 0;
+}
+#lL9{
+    background-position: -410px 0;
+}
+#lL10{
+    background-position: -451px 0;
+}
+#lL11{
+    background-position: -492px 0;
+}
+#lL12{
+    background-position: -533px 0;
+}
+#lL13{
+    background-position: -574px 0;
+}
+#lL14{
+    background-position: -615px 0;
+}
+#lL15{
+    background-position: -656px 0;
+}
+#lL16{
+    background-position: -697px 0
+}
+#lL17{
+    background-position: -738px 0;
+}
+#lL18{
+    background-position: -779px 0;
+}
+#lL19{
+    background-position: -820px 0;
+}
+/* Line Lamps End*/
+/* Double Panel */
+#gmbP{
+    height: 392px;
+    overflow: hidden;
+    position: absolute;
+    right: -70px;
+    top: 4px;
+    width: 0;
+    z-index: 2;
+}
+#gmbPWr{
+    background: url("/static/games/slots/casino-world/style/images/gamble/double_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 392px;
+    position: relative;
+    width: 850px;
+}
+#gmbPT{
+    left: 0;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+}
+
+#gmbA,
+#gmbW{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 425px;
+}
+#gmbAStr,
+#gmbACnt,
+#gmbWStr,
+#gmbWCnt,
+#prevCStr{
+    color: #3ae2ce;
+    font: bold 23px/100% Georgia,Georgia,serif;
+    text-shadow: 0 5px 1px rgba(0, 0, 0, 0.6);
+}
+
+#gmbA{
+
+}
+#gmbAStrWr{}
+#gmbAStr{}
+#gmbACntWr{}
+#gmbACnt{}
+#gmbW{}
+#gmbWStrWr{}
+#gmbWStr{}
+#gmbWCntWr{}
+#gmbWCnt{}
+#gmbPM{
+    left: 0;
+    position: absolute;
+    top: 80px;
+    width: 1024px;
+    height: 295px;
+}
+#gmbChsArRed{
+    left: 43px;
+}
+#gmbChsArRed,
+#gmbChsArBlack{
+    background: url("/static/games/slots/casino-world/style/images/gamble/btnUnderLayer.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 198px;
+    position: absolute;
+    top: 98px;
+    width: 300px;
+}
+
+#gmbChsRC{
+    background: url("/static/games/slots/casino-world/style/images/gamble/red.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#gmbChsRC,
+#gmbChsBC{
+    cursor: pointer;
+    height: 136px;
+    opacity: 0.7;
+    width: 203px;
+    top: 12px;
+    left: 49px;
+    position: absolute;
+}
+
+#gmbChsRC.active:hover,
+#gmbChsBC.active:hover,
+#gmbChsRC.sld,
+#gmbChsBC.sld{
+    opacity: 1;
+}
+.disabled #gmbChsRC:hover,
+.disabled #gmbChsBC:hover{
+    opacity: .7;
+}
+#gmbChsBCStrWr,
+#gmbChsRCStrWr{
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.gmbChsCStr{
+    font: bold 34px/136px Book Antiqua,Palatino Linotype,Palatino,serif;
+    text-shadow: 1px 0 #fff, 1px 1px #fff, 0 1px #fff, -1px 1px #fff, -1px 0 #fff, -1px -1px #fff, 0 -1px #fff, 1px -1px #fff;
+}
+.gmbChsCStrSel{
+    color: #fff;
+    display: none;
+    font: 20px/100% MyriadPro-Cond,Tahoma,Geneva,sans-serif;
+    position: absolute;
+    top: 20px;
+}
+.sld .gmbChsCStrSel{
+    display: inline;
+}
+#gmbChsRCStrWr .gmbChsCStrSel{
+    right: 35px;
+    text-shadow: 1px 0 rgba(114,0,0, .6), 1px 1px rgba(114,0,0, .6), 0 1px rgba(114,0,0, .6), -1px 1px rgba(114,0,0, .6), -1px 0 rgba(114,0,0, .6), -1px -1px rgba(114,0,0, .6), 0 -1px rgba(114,0,0, .6), 1px -1px rgba(114,0,0, .6);
+
+}
+#gmbChsBCStrWr .gmbChsCStrSel{
+    left: 35px;
+    text-shadow: 1px 0 rgba(0,0,0, .6), 1px 1px rgba(0,0,0, .6), 0 1px rgba(0,0,0, .6), -1px 1px rgba(0,0,0, .6), -1px 0 rgba(0,0,0, .6), -1px -1px rgba(0,0,0, .6), 0 -1px rgba(0,0,0, .6), 1px -1px rgba(0,0,0, .6);
+}
+#gmbChsRCStrWr .gmbChsCStr{
+    color: #D00000;
+}
+#gmbChsBCStrWr .gmbChsCStr{
+    color: #000;
+}
+.gmbChsDisC{
+    display: none;
+}
+.disabled .gmbChsDisC{
+    background: url("/static/games/slots/casino-world/style/images/gamble/gambleMask.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: not-allowed;
+    display: block;
+    height: 142px;
+    left: -10px;
+    opacity: 1;
+    position: absolute;
+    top: -2px;
+    width: 224px;
+}
+#gmbChsResC{}
+
+#gmbChsResC,
+#gmbChsResCBack,
+#gmbChsResCFront{
+    height: 188px;
+    width: 128px;
+}
+
+#gmbChsResC{
+    left: 362px;
+    position: absolute;
+    top: 83px;
+}
+
+#gmbChsResC div{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#gmbChsResC .c0{
+
+}
+#gmbChsResC .c1{
+    background: url("/static/games/slots/casino-world/style/images/gamble/big_card_1.png") repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c2{
+    background: url("/static/games/slots/casino-world/style/images/gamble/big_card_2.png") repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c3{
+    background: url("/static/games/slots/casino-world/style/images/gamble/big_card_3.png") repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c4{
+    background: url("/static/games/slots/casino-world/style/images/gamble/big_card_4.png") repeat scroll 0 0 transparent;
+}
+
+#gmbChsResCBack{}
+#gmbChsResCFront.su0{
+    background: url("/static/games/slots/casino-world/style/images/gamble/big_card_back_0.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#gmbChsResCFront.su00{
+    background: url("/static/games/slots/casino-world/style/images/gamble/big_card_back_00.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c0{}
+.su0{}
+#gmbChsArBlack{
+    left: 511px;
+}
+
+#gmbChsBC{
+    background: url("/static/games/slots/casino-world/style/images/gamble/black.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#gmbChsBCStrWr{}
+
+
+
+
+#gmbPB{
+    height: 82px;
+    left: 0;
+    position: absolute;
+    top: 82px;
+    width: 100%;
+}
+
+#gmbPBLs{
+    left: 0;
+    width: 390px;
+}
+#gmbPBRs{
+    right: 0;
+    width: 460px;
+}
+#gmbPBLs,
+#gmbPBRs{
+    height: 82px;
+    position: absolute;
+    top: 0;
+}
+
+#gmbPBLsWr{
+    height: 37px;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+#prevCStrL,
+#prevCStrM,
+#prevCStrR{
+    display: table-cell;
+    height: 37px;
+    vertical-align: middle;
+    text-align: center;
+}
+#prevCStrL{
+    width: 15px;
+}
+#prevCStrM{
+}
+#prevCStrR{
+    width: 15px;
+}
+#prevCStr{
+    padding: 0 10px;
+}
+
+
+#gmbPBRsWr{
+    height: 45px;
+    left: 14px;
+    position: absolute;
+    top: 16px;
+    overflow: hidden;
+}
+.prevCardItem{
+    float: left;
+    height: 45px;
+    margin: 0 21px 0 0;
+    width: 45px;
+}
+.prevCardItem.c1{
+    background: url("/static/games/slots/casino-world/style/images/gamble/small_card_1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItem.c2{
+    background: url("/static/games/slots/casino-world/style/images/gamble/small_card_2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItem.c3{
+    background: url("/static/games/slots/casino-world/style/images/gamble/small_card_3.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItem.c4{
+    background: url("/static/games/slots/casino-world/style/images/gamble/small_card_4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItemFrame{
+
+}
+/* Double Panel End*/
+
+
+
+/* Free Games Panel*/
+#fGP{
+    left: 50%;
+    margin: -158px 0 0 -286px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 573px;
+    z-index: 3;
+    height: 317px;
+    display: none;
+}
+#fGPWr{
+    background: url("/static/games/slots/casino-world/style/images/free_info.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    height: 317px;
+    position: absolute;
+    width: 573px;
+}
+#fGPCnt{
+    height: 317px;
+    top: 150px;
+    width: 573px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.fGCB,
+.fGCS{
+    color: #000;
+    font: bold 34px/40px Arial Black,Arial,Gadget, sans-serif;
+}
+.fGCB{
+
+}
+.fGCS{
+    font-size: 26px;
+}
+
+#fGPCntMDoorStr{}
+
+#fGPCntMDoorStr, #fGPCntBStr, #fGPCntTStr{
+    color: #EA9600;
+    font: 44px/100% Hobo Std,Comic Sans MS,Comic Sans MS5,cursive;
+    text-shadow: 1px 0 rgba(0,0,0, .6), 1px 1px rgba(0,0,0, .6), 0 1px rgba(0,0,0, .6), -1px 1px rgba(0,0,0, .6), -1px 0 rgba(0,0,0, .6), -1px -1px rgba(0,0,0, .6), 0 -1px rgba(0,0,0, .6), 1px -1px rgba(0,0,0, .6);
+}
+/* Free Games Panel End*/
+/* Choose color small buttons */
+#gmbChsArRedSBs, #gmbChsArBlackSBs, #gmbWX2{
+    display: none;
+}
+/* Choose color small buttons */
+
+/*   Pay table   */
+.pTIFrGmCnt,
+.pTIFrGmStr1,
+.pTIFrGmStr2{
+    font: 34px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    display: block;
+}
+
+.pTIFrGmCnt{
+    color: rgba(233, 92, 251, 1);
+    font-size: 48px;
+    margin: 15px 0 0 0;
+}
+.pTIFrGmStr1{
+    font-size: 34px;
+    color: rgba(164,255,89, 1);
+}
+.pTIFrGmStr2{
+    font-size: 28px;
+    color: rgba(255, 255, 255, 1);
+}
+.pTIImg {
+    background: none repeat scroll 0 0 rgba(0,111,176, 1);
+}
+.payTblSym1 .pTIImg,
+.payTblSym2 .pTIImg,
+.payTblSym3 .pTIImg,
+.payTblSym13 .pTIImg{
+    z-index: 2;
+}
+/*   Pay table   */
+
+#fps{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 3px white;
+    color: #333333;
+    font: bold 16px/100% Tahoma;
+    left: 10px;
+    opacity: 0.75;
+    padding: 2px 3px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #28A6E1;
+    top: 10px;
+    z-index: 7;
+}
+
+@media not all and (orientation:portrait){
+    #barsHeader, #stdHead, #freeHead {
+        display: none;
+    }
+    #barsSides{
+        display: none;
+    }
+    #lLWr,
+    #gM{
+        height: 378px;
+        width: 780px;
+    }
+    #gM{
+        margin: 0 0 0 -390px;
+        overflow: visible;
+    }
+    #barsWrapper{
+        top: 0;
+    }
+    #barsCanvasWr{
+        left: 41px;
+        top: 0;
+    }
+    #gmbP{
+        right: -33px;
+        top: -8px;
+    }
+    #lSLL {
+        left: 0;
+    }
+    #rSLL {
+        right: 0;
+    }
+    #barsBot{
+        display: none;
+    }
+    #lSLL, #rSLL{
+        top: -7px;
+    }
+}

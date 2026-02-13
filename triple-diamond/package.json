@@ -1,0 +1,12 @@
+{
+  "name": "triple-diamond",
+  "version": "1.0.0",
+  "description": "Triple Diamond - 5-reel slot game (local development build)",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

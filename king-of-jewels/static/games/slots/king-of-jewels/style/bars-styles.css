@@ -1,0 +1,825 @@
+@charset "utf-8";
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#gameOverlay{
+}
+#wrapper{}
+#gameSection{
+    height: 100%;
+    width: 100%;
+
+    /*visibility: hidden;*/
+
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    background: url("/static/games/slots/king-of-jewels/style/images/back-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 1);
+}
+#gameSection.originalSize{}
+#gameSection.scaledSize{}
+/* Game Top */
+#gT{}
+/* Game Top End*/
+
+/* Game Middle */
+#gM{
+    height: 527px;
+    left: 50%;
+    margin: 0 0 0 -415px;
+    overflow: hidden;
+    position: absolute;
+    width: 830px;
+
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+#barsArea{
+    height: 100%;
+    position: relative;
+}
+#barsHeader{
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+#barsHeader,
+#stdHead,
+#freeHead{
+    height: 77px;
+    width: 100%;
+}
+
+#stdHead,
+#freeHead,
+#barsSidesStd,
+#barsSidesFree,
+.stdSep,
+.freeSep{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -moz-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    -webkit-transition: all 300ms linear 0s;
+    -ms-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+}
+
+#stdHead{
+    background: url("/static/games/slots/king-of-jewels/style/images/head.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#freeHead{
+    background: url("/static/games/slots/king-of-jewels/style/images/head.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #stdHead{
+    opacity: 0;
+}
+.freeStt #freeHead{
+    opacity: 1;
+}
+#barsWrapper{
+    height: 450px;
+    left: 0;
+    position: absolute;
+    top: 77px;
+    width: 100%;
+    z-index: 2;
+}
+#barsSides{
+    z-index: 2;
+}
+#barsSides,
+#barsSidesStd,
+#barsSidesFree,
+#lLWr{
+    height: 450px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#barsSidesStd{
+    /*background: url("/static/games/slots/roll-of-ramses/style/images/barWins.png") no-repeat scroll center center rgba(0, 0, 0, 0);*/
+    opacity: 1;
+}
+#barsSidesFree{
+    /*background: url("/static/games/slots/roll-of-ramses/style/images/barWins.png") no-repeat scroll center center rgba(0, 0, 0, 0);*/
+    opacity: 0;
+}
+
+.freeStt #barsSidesStd{
+    opacity: 0;
+}
+.freeStt #barsSidesFree{
+    opacity: 1;
+}
+
+#barsCanvasWr{
+    background: url("/static/games/slots/king-of-jewels/style/images/bars-frame.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 450px;
+    left: 14px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 802px;
+    z-index: 2;
+}
+
+.barsSeparator{
+    display: none;
+}
+.stdSep, .freeSep{
+    height: inherit;
+    width: inherit;
+}
+.smpBr, .stdBrBck, .freeBrBck{
+    height: 444px;
+    position: absolute;
+    top: 0;
+    width: 148px;
+}
+.smpBr{
+    top: 5px;
+}
+.stdBrBck{
+    background: url("/static/games/slots/king-of-jewels/style/images/bar-back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+.freeBrBck{
+    background: url("/static/games/slots/king-of-jewels/style/images/bar-back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt .stdBrBck{
+    opacity: 0;
+}
+.freeStt .freeBrBck{
+    opacity: 1;
+}
+
+#fstBr{
+    left: 3px;
+}
+#sndBr{
+    left: 165px;
+}
+#thdBr{
+    left: 327px;
+}
+#frtBr{
+    left: 489px;
+}
+#fthBr{
+    left: 651px;
+}
+
+#fstSep{
+}
+#sndSep{
+}
+#thdSep{
+}
+#frhSep{
+}
+.stdSep{
+
+}
+.freeSep{
+
+}
+
+.freeStt .stdSep{
+
+}
+.freeStt .freeSep{
+
+}
+#barsCanvas{
+    left: 3px;
+    position: absolute;
+    top: 5px;
+}
+#barsBot{
+}
+#barsBot,
+#barsBotStd,
+#barsBotFree{
+    display: none;
+}
+#barsBotStd,
+#barsBotFree{
+}
+#barsBotStd{}
+#barsBotFree{}
+.freeStt #barsBotStd{
+    opacity: 0;
+}
+.freeStt #barsBotFree{
+    opacity: 1;
+}
+/* Game Middle End */
+
+/* Game Bottom */
+#gB{
+
+}
+#dP{
+
+}
+/* Game Bottom End */
+/* Line Lamps */
+#lLWr{
+    z-index: 2;
+    /*top: 82px;*/
+    top: 0;
+}
+
+#lSLL,
+#rSLL{
+    position: absolute;
+    top: 0;
+    width: 41px;
+    height: 100%;
+}
+#lSLL{
+    left: 0;
+}
+#rSLL{
+    right: 0;
+}
+.sLL{
+    background: url("/static/games/slots/gates-of-avalon/style/images/lamps-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+}
+.sLLAct{}
+.sLLACWR,
+.sLLAC,
+.sLL{
+    width: 40px;
+    height: 39px;
+}
+.sLLACWR{
+    background: url("/static/games/slots/gates-of-avalon/style/images/lamps-sprite.png") no-repeat scroll 0 -900px rgba(0, 0, 0, 0);
+}
+.sLLAct .sLLACWR{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sLLAC{
+    display: none;
+}
+.sLLAct .sLLAC{
+    font: 24px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: #000;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    text-shadow: 1px 0 rgba(255, 255, 255, .6), 1px 1px rgba(255, 255, 255, .6), 0 1px rgba(255, 255, 255, .6), -1px 1px rgba(255, 255, 255, .6), -1px 0 rgba(255, 255, 255, .6), -1px -1px rgba(255, 255, 255, .6), 0 -1px rgba(255, 255, 255, .6), 1px -1px rgba(255, 255, 255, .6);
+}
+#lL0{
+    background-position: 0 -225px;
+}
+#lL1{
+    background-position: 0 -45px;
+}
+#lL2{
+    background-position: 0 -360px;
+}
+#lL3{
+    background-position: 0 0;
+}
+#lL4{
+    background-position: 0 -405px;
+}
+#lL5{
+    background-position: 0 -135px;
+}
+#lL6{
+    background-position: 0 -270px;
+}
+#lL7{
+    background-position: 0 -90px;
+}
+#lL8{
+    background-position: 0 -315px;
+}
+#lL9{
+    background-position: 0 -180px;
+}
+#lL10{
+    background-position: 0 -675px;
+}
+#lL11{
+    background-position: 0 -630px;
+}
+#lL12{
+    background-position: 0 -495px;
+}
+#lL13{
+    background-position: 0 -810px;
+}
+#lL14{
+    background-position: 0 -585px;
+}
+#lL15{
+    background-position: 0 -720px;
+}
+#lL16{
+    background-position: 0 -450px;
+}
+#lL17{
+    background-position: 0 -855px;
+}
+#lL18{
+    background-position: 0 -540px;
+}
+#lL19{
+    background-position: 0 -765px;
+}
+/* Line Lamps End*/
+
+
+
+
+
+/* Double Panel */
+#gmbPWr{
+    background: url("/static/games/slots/king-of-jewels/style/images/gamble/gamble-back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 450px;
+    width: 799px;
+}
+#gmbP{
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 13px;
+    top: 0;
+    width: 0;
+    z-index: 2;
+}
+#gmbPT,
+#gmbPM,
+#gmbPB{
+    position: absolute;
+    width: 803px;
+}
+#gmbPT{
+    top: 35px;
+}
+#gmbPM{
+    height: 227px;
+    top: 110px;
+}
+#gmbPB{}
+
+#gmbAStr, #gmbACnt, #gmbWStr, #gmbWCnt, #gmbWX2Str, #gmbWX2Cnt{
+    color: #fff568;
+    font: bold 22px Book Antiqua,Palatino Linotype,Palatino,serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+#gmbA,
+#gmbW{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 401px;
+}
+#gmbAStrWr, #gmbACntWr, #gmbWStrWr, #gmbWCntWr, #gmbWX2StrWr, #gmbWX2CntWr{
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+}
+
+#gmbChsArRed{
+    left: 25px;
+}
+#gmbChsArBlack{
+    right: 25px;
+}
+#gmbChsArRed,
+#gmbChsArBlack{
+    height: 165px;
+    position: absolute;
+    top: 25px;
+    width: 275px;
+}
+
+#gmbChsRC{
+}
+
+#gmbChsRC,
+#gmbChsBC,
+#gmbChsRCStrWr,
+#gmbChsBCStrWr,
+.disabled .gmbChsDisC{
+    height: 71px;
+    width: 275px;
+}
+
+#gmbChsRC,
+#gmbChsBC{
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.active #gmbChsRCStrWr:hover,
+.active #gmbChsBCStrWr:hover{
+}
+
+#gmbChsRCStrWr, .disabled #gmbChsRCStrWr,
+#gmbChsBCStrWr, .disabled #gmbChsBCStrWr{
+}
+#gmbChsRCStrWr{
+    /*background-position: 0 -147px;*/
+}
+#gmbChsBCStrWr{
+    /*background-position: 0 -294px;*/
+}
+
+#gmbChsBCStrWr,
+#gmbChsRCStrWr{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorBtnStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.active #gmbChsRCStrWr:active,
+.active #gmbChsBCStrWr:active{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorBtnAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.active #gmbChsBCStrWr:active .gmbChsCStr,
+.active #gmbChsRCStrWr:active .gmbChsCStr{
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
+
+.gmbChsCStr{
+    font: bold 34px/71px Book Antiqua,Palatino Linotype,Palatino,serif;
+    text-shadow: 1px 0 #fff, 1px 1px #fff, 0 1px #fff, -1px 1px #fff, -1px 0 #fff, -1px -1px #fff, 0 -1px #fff, 1px -1px #fff;
+}
+.gmbChsCStrSel{
+    color: #fff;
+    display: none;
+    font: 24px/100% MyriadPro-Cond,Tahoma,Geneva,sans-serif;
+    position: absolute;
+    top: 10px;
+}
+.sld .gmbChsCStrSel{
+    display: block;
+}
+#gmbChsRCStrWr .gmbChsCStrSel{
+    text-shadow: 1px 0 rgba(114,0,0, .6), 1px 1px rgba(114,0,0, .6), 0 1px rgba(114,0,0, .6), -1px 1px rgba(114,0,0, .6), -1px 0 rgba(114,0,0, .6), -1px -1px rgba(114,0,0, .6), 0 -1px rgba(114,0,0, .6), 1px -1px rgba(114,0,0, .6);
+    right: 10px;
+
+}
+#gmbChsBCStrWr .gmbChsCStrSel{
+    text-shadow: 1px 0 rgba(0,0,0, .6), 1px 1px rgba(0,0,0, .6), 0 1px rgba(0,0,0, .6), -1px 1px rgba(0,0,0, .6), -1px 0 rgba(0,0,0, .6), -1px -1px rgba(0,0,0, .6), 0 -1px rgba(0,0,0, .6), 1px -1px rgba(0,0,0, .6);
+    left: 10px;
+}
+#gmbChsRCStrWr .gmbChsCStr{
+    color: #D00000;
+}
+#gmbChsBCStrWr .gmbChsCStr{
+    color: #000;
+}
+
+.gmbChsDisC{
+    display: none;
+}
+.disabled .gmbChsDisC{
+    cursor: not-allowed;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+#gmbChsResC{}
+
+#gmbChsResC,
+#gmbChsResCBack,
+#gmbChsResCFront{
+    height: 227px;
+    width: 158px;
+}
+
+#gmbChsResC{
+    left: 325px;
+    position: absolute;
+    top: 0;
+}
+
+#gmbChsResC div{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#gmbChsResC .c0{
+
+}
+#gmbChsResC .c1{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig1.png") no-repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c2{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig2.png") no-repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c3{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig3.png") no-repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c4{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig4.png") no-repeat scroll 0 0 transparent;
+}
+
+#gmbChsResCBack{}
+#gmbChsResCFront.su0{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig0.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#gmbChsResCFront.su00{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig00.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c0{}
+.su0{}
+
+
+#gmbChsBC{
+}
+#gmbChsBCStrWr{}
+
+
+
+
+#gmbPB{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/prevCardsBackLayer.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 35px;
+    height: 61px;
+    left: 45px;
+    width: 711px;
+}
+
+#gmbPBLs{
+    left: 0;
+    width: 300px;
+}
+#gmbPBRs{
+    right: 0;
+    width: 411px;
+}
+#gmbPBLs,
+#gmbPBRs{
+    height: 61px;
+    position: absolute;
+    top: 0;
+}
+
+#gmbPBLsWr{
+    height: 61px;
+    width: 100%;
+}
+#prevCStrL,
+#prevCStrM,
+#prevCStrR{
+    display: table-cell;
+    height: 61px;
+    text-align: center;
+    vertical-align: middle;
+}
+#prevCStrL{
+    width: 0;
+}
+#prevCStrM{
+}
+#prevCStrR{
+    width: 0;
+}
+#prevCStr{
+    padding: 0 10px;
+    color: #000;
+    font: bold 20px/100% Book Antiqua,Palatino Linotype,Palatino,serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+#gmbPBRsWr{
+    height: 61px;
+    overflow: hidden;
+    width: 411px;
+}
+.prevCardItem{
+    float: left;
+    height: 61px;
+    margin: 0 4px;
+    width: 32px;
+}
+.c1 .prevCardItemFrame{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.c2 .prevCardItemFrame{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.c3 .prevCardItemFrame{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor3.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.c4 .prevCardItemFrame{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor4.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.prevCardItemFrame{
+    height: 61px;
+    width: 32px;
+}
+
+#smlBtnHrts, #smlBtnDmnd, #smlBtnClbs, #smlBtnSpds,
+#smlBtnHrtsWr, #smlBtnDmndWr, #smlBtnClbsWr, #smlBtnSpdsWr, .smlBtnChColStr, .smlBtnChColDis{
+    height: 77px;
+    width: 115px;
+}
+#smlBtnHrts, #smlBtnDmnd, #smlBtnClbs, #smlBtnSpds{
+    position: absolute;
+}
+#smlBtnHrtsWr, #smlBtnDmndWr, #smlBtnClbsWr, #smlBtnSpdsWr{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorCardBackStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: relative;
+}
+.active #smlBtnHrtsWr:hover,
+.active #smlBtnDmndWr:hover,
+.active #smlBtnClbsWr:hover,
+.active #smlBtnSpdsWr:hover{
+    /*background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suitBtnBackHov.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+}
+
+.active #smlBtnHrtsWr:active,
+.active #smlBtnDmndWr:active,
+.active #smlBtnClbsWr:active,
+.active #smlBtnSpdsWr:active{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorCardBackAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#smlBtnHrts .smlBtnChColDis,
+#smlBtnDmnd .smlBtnChColDis,
+#smlBtnClbs .smlBtnChColDis,
+#smlBtnSpds .smlBtnChColDis{
+    display: none;
+}
+#smlBtnHrts.disabled .smlBtnChColDis,
+#smlBtnDmnd.disabled .smlBtnChColDis,
+#smlBtnClbs.disabled .smlBtnChColDis,
+#smlBtnSpds.disabled .smlBtnChColDis{
+    cursor: not-allowed;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#gmbChsArBlackSBs,
+#gmbChsArRedSBs{
+    height: 77px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#smlBtnHrtsWr{}
+.smlBtnChColStr{
+    display: block;
+    position: absolute;
+}
+.smlBtnChColSel{
+
+}
+#smlBtnHrts .smlBtnChColSel,
+#smlBtnDmnd .smlBtnChColSel,
+#smlBtnClbs .smlBtnChColSel,
+#smlBtnSpds .smlBtnChColSel{
+    display: none;
+}
+
+#smlBtnHrts .sld .smlBtnChColSel,
+#smlBtnDmnd .sld .smlBtnChColSel,
+#smlBtnClbs .sld .smlBtnChColSel,
+#smlBtnSpds .sld .smlBtnChColSel{
+    display: block;
+    font: 24px/71px MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 0 rgba(255, 255, 255, 0.8), 1px 1px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8), -1px 1px rgba(255, 255, 255, 0.8), -1px 0 rgba(255, 255, 255, 0.8), -1px -1px rgba(255, 255, 255, 0.8), 0 -1px rgba(255, 255, 255, 0.8), 1px -1px rgba(255, 255, 255, 0.8);
+    top: 0;
+    width: 100%;
+}
+#smlBtnHrts, #smlBtnClbs{
+    left: 10px;
+}
+#smlBtnDmnd, #smlBtnSpds{
+    right: 10px;
+}
+#smlBtnDmndWr{}
+.smlBtnChColDis{}
+
+#smlBtnHrts .smlBtnChColStr{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor3.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+}
+#smlBtnDmnd .smlBtnChColStr{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor4.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+}
+#smlBtnClbs .smlBtnChColStr{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor2.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+}
+#smlBtnSpds .smlBtnChColStr{
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor1.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+}
+#gmbPWr .active .smlBtnChColStr:active{
+    background-position: 30px 12px;
+}
+/* Double Panel End*/
+/* Pay Table */
+.sctAddInfWr{
+    display: table-cell;
+    width: 264px;
+    height: 174px;
+    vertical-align: middle;
+}
+.pTIFrGmStr1,.pTIFrGmStr2,.pTIFrGmStr3,.pTIFrGmStr4,.pTIFrGmStr5, .pTIFrGmCnt, .symAddInfoWr{
+    font: bold 26px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: rgba(255, 255, 255, 1);
+}
+.pTIFrGmCnt{
+    color: rgba(233, 92, 251, 1);
+    font-size: 44px;
+}
+
+.pTIFrGmStr1{
+    color: rgba(164, 255, 89, 1);
+    font-size: 30px;
+}
+
+.pTIImg{
+}
+.symAddInfoWr span{
+    color: rgba(233, 92, 251, 1);
+}
+.symAddInfoWr{
+    display: table-cell;
+    height: 172px;
+    vertical-align: middle;
+    width: 264px;
+    padding: 0 15px;
+}
+.shineKOJHead{
+    height: 100%;
+    width: 100%;
+    background: url("/static/games/slots/king-of-jewels/style/images/shining.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+/* Pay Table */
+@media not all and (orientation:portrait){
+    #barsHeader, #stdHead, #freeHead {
+        display: none;
+    }
+    #barsSides{
+        display: none;
+    }
+    #lLWr,
+    #gM{
+        height: 450px;
+        width: 878px;
+    }
+    #gM{
+        margin: 0 0 0 -439px;
+    }
+    #barsWrapper{
+        height: 450px;
+        top: 0;
+    }
+    #barsCanvasWr{
+        left: 38px;
+    }
+    #gmbP{
+        right: 40px;
+    }
+    #lSLL {
+        left: 0;
+    }
+    #rSLL {
+        right: 0;
+    }
+}

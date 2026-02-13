@@ -243,11 +243,10 @@ function generateSpinResponse(params) {
   const den = (params && params.den) || 1;
   const lines = (params && params.lines) || 20;
 
-  // Deduct bet from credit
-  credit -= bet;
+  // Deduct total bet from credit
+  // bet = betPerLine * denomination (per-line bet), total = bet * lines
+  credit -= bet * lines;
   if (credit < 0) credit = 100000; // Reset if broke
-
-  const betPerLine = bet / lines;
 
   // Generate symbols by picking random positions on the reel strips (bars)
   // This ensures symbols are consistent with pos and bars data
@@ -285,7 +284,8 @@ function generateSpinResponse(params) {
     // Check if this match count has a payout
     const payout = WIN_TABLE[firstSym] && WIN_TABLE[firstSym][matchCount];
     if (payout) {
-      const lineWin = Math.floor(payout * betPerLine);
+      // bet IS the per-line bet (betPerLine * denomination), use it directly
+      const lineWin = Math.floor(payout * bet);
       totalWin += lineWin;
 
       // Build position map for this line win
@@ -329,9 +329,6 @@ function generateSpinResponse(params) {
           symbols: symbols,
           win: totalWin,
           state: "main",
-          free_count: 0,
-          free_played: 0,
-          bonus_symbol: false,
           log: log,
           card: 0,
           double: { step: 0 },

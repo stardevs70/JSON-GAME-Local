@@ -1,0 +1,20 @@
+{
+  "result": [
+    {
+      "data": {
+        "state": "main",
+        "card": 1,
+        "win": 0,
+        "double": { "step": 1 },
+        "double_hist": [1]
+      },
+      "info": {
+        "credit": 100000,
+        "jackpot": 1500000,
+        "bonus": 500000,
+        "min_bet_jackpot": 2000,
+        "min_bet_bonus": 1000
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+@charset "utf-8";
+#lghMove{
+    -moz-animation-name: lightSliding;
+    -moz-animation-duration: 15s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    -webkit-animation-name: lightSliding;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -ms-animation-name: lightSliding;
+    -ms-animation-duration: 15s;
+    -ms-animation-timing-function: linear;
+    -ms-animation-iteration-count: infinite;
+
+    -o-animation-name: lightSliding;
+    -o-animation-duration: 15s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: lightSliding;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#lftCube,
+#rgtCube{
+    -moz-animation-name: opacityFading;
+    -moz-animation-duration: 10s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    -webkit-animation-name: opacityFading;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -ms-animation-name: opacityFading;
+    -ms-animation-duration: 10s;
+    -ms-animation-timing-function: linear;
+    -ms-animation-iteration-count: infinite;
+
+    -o-animation-name: opacityFading;
+    -o-animation-duration: 10s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: opacityFading;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@-moz-keyframes lightSliding{
+    0%{left: 0;}
+    10%{left: 100%;}
+    100%{left: 100%;}
+}
+
+@-webkit-keyframes lightSliding{
+    0%{left: 0;}
+    10%{left: 100%;}
+    100%{left: 100%;}
+}
+
+@-o-keyframes lightSliding{
+    0%{left: 0;}
+    10%{left: 100%;}
+    100%{left: 100%;}
+}
+
+@-ms-keyframes lightSliding{
+    0%{left: 0;}
+    10%{left: 100%;}
+    100%{left: 100%;}
+}
+
+@keyframes lightSliding{
+    0%{left: 0;}
+    10%{left: 100%;}
+    100%{left: 100%;}
+}
+
+@-moz-keyframes opacityFading{
+    0%{opacity: 0;}
+    50%{opacity: .6;}
+    100%{opacity: 0;}
+}
+
+@-webkit-keyframes opacityFading{
+    0%{opacity: 0;}
+    50%{opacity: .6;}
+    100%{opacity: 0;}
+}
+
+@-o-keyframes opacityFading{
+    0%{opacity: 0;}
+    50%{opacity: .6;}
+    100%{opacity: 0;}
+}
+
+@-ms-keyframes opacityFading{
+    0%{opacity: 0;}
+    50%{opacity: .6;}
+    100%{opacity: 0;}
+}
+
+@keyframes opacityFading{
+    0%{opacity: 0;}
+    50%{opacity: .6;}
+    100%{opacity: 0;}
+}

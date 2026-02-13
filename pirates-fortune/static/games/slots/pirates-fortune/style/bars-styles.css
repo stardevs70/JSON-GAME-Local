@@ -1,0 +1,790 @@
+@charset "utf-8";
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#gameOverlay{
+    /*display: none;*/
+}
+#wrapper{}
+#gameSection{
+    height: 100%;
+    width: 100%;
+
+    /*visibility: hidden;*/
+
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    background: url("/static/games/slots/pirates-fortune/style/images/back-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 1);
+
+}
+#gameSection.originalSize{}
+#gameSection.scaledSize{}
+/* Game Top */
+#gT{}
+/* Game Top End*/
+
+/* Game Middle */
+#barsArea, #barsWrapper, #lLWr, #barsSidesStd, #barsSidesFree, #barsSides{
+    /*height: 483px;*/
+    height: 521px;
+}
+#gM{
+    /*height: 630px;*/
+    left: 50%;
+    margin: 0 0 0 -512px;
+    position: absolute;
+    width: 1024px;
+
+    overflow: hidden;
+    height: 483px;
+    /*height: 603px;*/
+
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+
+
+
+#barsArea{
+    position: relative;
+    /*height: 603px;*/
+}
+#barsHeader{
+    /*left: 0;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*z-index: 3;*/
+    display: none;
+}
+#barsHeader,
+#stdHead,
+#freeHead,
+#lightBlink{
+    /*height: 138px;*/
+    /*width: 1024px;*/
+}
+
+#stdHead,
+#freeHead,
+#barsSidesStd,
+#barsSidesFree,
+.stdSep,
+.freeSep{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -moz-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    -webkit-transition: all 300ms linear 0s;
+    -ms-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+}
+
+#stdHead{
+    background: url("/static/games/slots/pirates-fortune/style/images/header_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#freeHead{
+    background: url("/static/games/slots/pirates-fortune/style/images/free_games_header_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #stdHead{
+    opacity: 0;
+}
+.freeStt #freeHead{
+    opacity: 1;
+}
+
+#lightBlink{
+    position: relative;
+}
+#headBarrel{
+    background: url("/static/games/slots/pirates-fortune/style/images/barrel.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 126px;
+    left: 0;
+    position: absolute;
+    top: 22px;
+    width: 93px;
+}
+#lCandle,
+#rCandle{
+    background: url("/static/games/slots/pirates-fortune/style/images/candle_light.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 121px;
+    position: absolute;
+    top: 0;
+    width: 119px;
+}
+#lCandle{
+    left: 88px;
+}
+#rCandle{
+    left: 819px;
+}
+
+#barsWrapper{
+    /*height: 521px;*/
+    /*z-index: 2;*/
+    /*left: 0;*/
+    /*position: absolute;*/
+    /*top: 82px;*/
+    /*width: 1024px;*/
+
+
+    /*height: 521px;*/
+    left: 0;
+    position: absolute;
+    top: -41px;
+    width: 1024px;
+    z-index: 2;
+}
+#barsSides{
+    z-index: 2;
+}
+
+#barsSides, #barsSidesStd, #barsSidesFree{
+    /*height: 521px;*/
+}
+
+#barsSides,
+#barsSidesStd,
+#barsSidesFree,
+#lLWr{
+    /*height: 521px;*/
+    width: 1024px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*height: 549px;*/
+}
+#barsSidesStd{
+    background: url("/static/games/slots/pirates-fortune/style/images/bars_sides.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#barsSidesFree{
+    background: url("/static/games/slots/pirates-fortune/style/images/free_bars_sides.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #barsSidesStd{
+    opacity: 0;
+}
+.freeStt #barsSidesFree{
+    opacity: 1;
+}
+
+#barsCanvasWr{
+    background: url("/static/games/slots/pirates-fortune/style/images/bars_back_pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 483px;
+    left: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 38px;
+    width: 944px;
+    z-index: 1;
+}
+
+.barsSeparator{
+    height: 516px;
+    position: absolute;
+    top: -6px;
+    width: 12px;
+}
+.stdSep, .freeSep{
+    width: 12px;
+    height: 516px;
+}
+#fstSep{
+    left: 191px;
+}
+#sndSep{
+    left: 374px;
+}
+#thdSep{
+    left: 557px;
+}
+#frhSep{
+    left: 740px;
+}
+.stdSep{
+    background: url("/static/games/slots/pirates-fortune/style/images/strip_between_bars.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+.freeSep{
+    background: url("/static/games/slots/pirates-fortune/style/images/free_strip_between_bars.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt .stdSep{
+    opacity: 0;
+}
+.freeStt .freeSep{
+    opacity: 1;
+}
+#barsCanvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Game Middle End */
+
+/* Game Bottom */
+#gB{
+
+}
+#dP{
+
+}
+/* Game Bottom End */
+/* Line Lamps */
+#lLWr{
+    z-index: 2;
+    /*top: 82px;*/
+    top: 0;
+}
+
+#lSLL,
+#rSLL{
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+}
+#lSLL{
+    left: 0;
+}
+#rSLL{
+    right: 3px;
+}
+.sLL{
+    position: absolute;
+    height: 42px;
+    width: 62px;
+    background: url("/static/games/slots/pirates-fortune/style/images/lamps_sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+.sLLAct{}
+.sLLACWR,
+.sLLAC{
+    height: 42px;
+    width: 62px;
+
+}
+.sLLACWR{
+    background: url("/static/games/slots/pirates-fortune/style/images/lamps_sprite.png") no-repeat scroll -620px 0 rgba(0, 0, 0, 0);
+}
+.sLLAct .sLLACWR{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sLLAC{
+    display: none;
+}
+.sLLAct .sLLAC{
+    font: 24px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: #000;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    text-shadow: #fff 1px 0, #fff 1px 1px, #fff 0 1px, #fff -1px 1px, #fff -1px 0, #fff -1px -1px, #fff 0 -1px, #fff 1px -1px
+}
+#lL0, #lL10{
+    background-position: 0 0;
+}
+#lL1, #lL12{
+    background-position: -62px 0;
+}
+#lL2, #lL13{
+    background-position: -124px 0;
+}
+#lL3, #lL16{
+    background-position: -186px 0;
+}
+#lL4, #lL17{
+    background-position: -248px 0;
+}
+#lL5, #lL14{
+    background-position: -310px 0;
+}
+#lL6, #lL15{
+    background-position: -372px 0;
+}
+#lL7, #lL18{
+    background-position: -434px 0;
+}
+#lL8, #lL19{
+    background-position: -496px 0;
+}
+#lL9, #lL11{
+    background-position: -558px 0;
+}
+/* Line Lamps End*/
+/* Double Panel */
+#gmbP{
+    height: 528px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 31px;
+    width: 0;
+    z-index: 2;
+}
+#gmbPWr{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/double_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 528px;
+    width: 1024px;
+    position: relative;
+}
+#gmbPT{
+    width: 1024px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+#gmbA,
+#gmbW{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 512px;
+}
+#gmbAStr,
+#gmbACnt,
+#gmbWStr,
+#gmbWCnt,
+#prevCStr{
+    color: #efb745;
+    font: bold 23px/100% Georgia,Georgia,serif;
+}
+
+#gmbA{
+
+}
+#gmbAStrWr{}
+#gmbAStr{}
+#gmbACntWr{}
+#gmbACnt{}
+#gmbW{}
+#gmbWStrWr{}
+#gmbWStr{}
+#gmbWCntWr{}
+#gmbWCnt{}
+#gmbPM{
+    left: 0;
+    position: absolute;
+    top: 80px;
+    width: 1024px;
+    height: 295px;
+}
+#gmbChsArRed{
+    left: 127px;
+}
+#gmbChsArRed,
+#gmbChsArBlack{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/sel_button_not_act.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 106px;
+    height: 112px;
+    width: 199px;
+}
+
+#gmbChsRC{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/red_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#gmbChsRC,
+#gmbChsBC{
+    cursor: pointer;
+    height: 112px;
+    width: 199px;
+    opacity: .7;
+}
+
+.disabled #gmbChsRC:hover,
+.disabled #gmbChsBC:hover{
+    opacity: .7;
+}
+
+#gmbChsRC.active:hover,
+#gmbChsBC.active:hover,
+#gmbChsRC.sld,
+#gmbChsBC.sld{
+    opacity: 1;
+}
+#gmbChsBCStrWr,
+#gmbChsRCStrWr{
+    height: 112px;
+    width: 199px;
+    text-align: center;
+}
+.gmbChsCStr{
+    font: bold 34px/112px Book Antiqua,Palatino Linotype,Palatino,serif;
+    text-shadow: 1px 0 #FFF, 1px 1px #FFF, 0 1px #FFF, -1px 1px #FFF, -1px 0 #FFF, -1px -1px #FFF, 0 -1px #FFF, 1px -1px #FFF;
+}
+.gmbChsCStrSel{
+    color: #fff;
+    position: absolute;
+    top: 14px;
+    font: 18px/100% MyriadPro-Cond,Tahoma,Geneva,sans-serif;
+    display: none;
+}
+.sld .gmbChsCStrSel{
+    display: inline;
+}
+#gmbChsRCStrWr .gmbChsCStrSel{
+    right: 20px;
+    text-shadow: 1px 0 rgba(114,0,0, .6), 1px 1px rgba(114,0,0, .6), 0 1px rgba(114,0,0, .6), -1px 1px rgba(114,0,0, .6), -1px 0 rgba(114,0,0, .6), -1px -1px rgba(114,0,0, .6), 0 -1px rgba(114,0,0, .6), 1px -1px rgba(114,0,0, .6);
+
+}
+#gmbChsBCStrWr .gmbChsCStrSel{
+    left: 20px;
+    text-shadow: 1px 0 rgba(0,0,0, .6), 1px 1px rgba(0,0,0, .6), 0 1px rgba(0,0,0, .6), -1px 1px rgba(0,0,0, .6), -1px 0 rgba(0,0,0, .6), -1px -1px rgba(0,0,0, .6), 0 -1px rgba(0,0,0, .6), 1px -1px rgba(0,0,0, .6);
+}
+#gmbChsRCStrWr .gmbChsCStr{
+    color: #D00000;
+}
+#gmbChsBCStrWr .gmbChsCStr{
+    color: #000;
+}
+.gmbChsDisC{
+    display: none;
+}
+.disabled .gmbChsDisC{
+    background: url("/static/games/slots/pirates-fortune/style/images/dis_patt.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    cursor: not-allowed;
+    display: block;
+    height: 112px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 199px;
+}
+#gmbChsResC{}
+#gmbChsResC{
+    height: 272px;
+    left: 414px;
+    position: absolute;
+    top: 20px;
+    width: 198px;
+}
+
+#gmbChsResC div{
+
+    height: 272px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 198px;
+}
+
+#gmbChsResC .c0{
+
+}
+#gmbChsResC .c1{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/big_card_1.png") repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c2{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/big_card_2.png") repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c3{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/big_card_3.png") repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c4{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/big_card_4.png") repeat scroll 0 0 transparent;
+}
+
+#gmbChsResCBack{}
+#gmbChsResCFront.su0{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/big_card_back_0.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#gmbChsResCFront.su00{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/big_card_back_00.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c0{}
+.su0{}
+#gmbChsArBlack{
+    left: 695px;
+}
+
+#gmbChsBC{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/black_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#gmbChsBCStrWr{}
+
+
+
+
+#gmbPB{
+    position: absolute;
+    top: 398px;
+    width: 1024px;
+    height: 82px;
+    left: 0;
+}
+
+#gmbPBLs{
+    left: 0;
+    width: 424px;
+}
+#gmbPBRs{
+    right: 0;
+    width: 600px;
+}
+#gmbPBLs,
+#gmbPBRs{
+    position: absolute;
+    height: 82px;
+    /*width: 512px;*/
+
+    top:0;
+}
+
+#gmbPBLsWr{
+    height: 37px;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+#prevCStrL,
+#prevCStrM,
+#prevCStrR{
+    display: table-cell;
+    height: 37px;
+    vertical-align: middle;
+    text-align: center;
+}
+#prevCStrL{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/prev_cards_str_back_l.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 15px;
+}
+#prevCStrM{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/prev_cards_str_back_m.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+}
+#prevCStrR{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/prev_cards_str_back_r.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 15px;
+}
+#prevCStr{
+    padding: 0 10px;
+}
+
+
+#gmbPBRsWr{
+    height: 49px;
+    top: 16px;
+    position: absolute;
+    left: 10px;
+}
+.prevCardItem{
+    height: 49px;
+    width: 53px;
+    float: left;
+}
+.prevCardItem.c1{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/small_card_1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItem.c2{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/small_card_2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItem.c3{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/small_card_3.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItem.c4{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/small_card_4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItemFrame{
+    background: url("/static/games/slots/pirates-fortune/style/images/gamble/prev_card_frame.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 53px;
+    height: 49px;
+}
+/* Double Panel End*/
+
+
+
+/* Free Games Panel*/
+#fGP{
+    height: 0;/*515px;*/
+    left: 50%;
+    margin: 0 0 0 -362px;
+    position: absolute;
+    top: 0;
+    width: 723px;
+    z-index: 3;
+    overflow: hidden;
+}
+#fGPWr{
+    background: url("/static/games/slots/pirates-fortune/style/images/free_games_shield_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 515px;
+    position: absolute;
+    width: 723px;
+    bottom: 0;
+}
+#fGPCnt{
+    position: absolute;
+    top: 150px;
+    height: 350px;
+    width: 723px;
+}
+
+#fGPCntT{
+    width: 100%;
+    height: 100px;
+}
+#fGPCntM{
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
+#fGPCntB{
+    width: 100%;
+    height: 100px;
+}
+
+#fGPCntTStr{
+
+}
+#fGPCntTStr, #fGPCntBStr{
+    width: 723px;
+    height: 100px;
+}
+#fGPCntBStr{
+
+}
+
+#fGPCntMRes{}
+#fGPCntMResStr{
+    font: 72px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: #0068FE
+}
+#fGPCntMResStr #fGPCntMResStrCnt{
+    font-size: 72px;
+}
+#fGPCntMResStr span{
+    font-size: 30px;
+}
+#fGPCntMResStr,
+#fGPCntMDoorStr{
+    width: 521px;
+    height: 126px;
+}
+#fGPCntMDoor{
+    background: url("/static/games/slots/pirates-fortune/style/images/free_shield_door.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -moz-transform-origin: 0 0;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform-origin: 0 0;
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform-origin: 0 0;
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform-origin: 0 0;
+
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 0 0;
+}
+#fGPCntMDoor,
+#fGPCntMRes{
+    height: 126px;
+    width: 521px;
+    top: 12px;
+    left: 101px;
+    position: absolute;
+}
+#fGPCntMDoorStr{}
+#fGPCntMDoorStr, #fGPCntBStr, #fGPCntTStr, #fGPCntMResStr{
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+#fGPCntMDoorStr, #fGPCntBStr, #fGPCntTStr{
+    color: #EA9600;
+    font: 44px/100% Hobo Std,Comic Sans MS,Comic Sans MS5,cursive;
+    text-shadow: 1px 0 rgba(0,0,0, .6), 1px 1px rgba(0,0,0, .6), 0 1px rgba(0,0,0, .6), -1px 1px rgba(0,0,0, .6), -1px 0 rgba(0,0,0, .6), -1px -1px rgba(0,0,0, .6), 0 -1px rgba(0,0,0, .6), 1px -1px rgba(0,0,0, .6);
+}
+/* Free Games Panel End*/
+/* Choose color small buttons */
+#gmbChsArRedSBs, #gmbChsArBlackSBs, #gmbWX2{
+    display: none;
+}
+/* Choose color small buttons */
+
+/*   Pay table   */
+.pTIFrGmCnt,
+.pTIFrGmStr1,
+.pTIFrGmStr2{
+    font: 34px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    display: block;
+}
+
+.pTIFrGmCnt{
+    color: rgba(233, 92, 251, 1);
+    font-size: 48px;
+    margin: 15px 0 0 0;
+}
+.pTIFrGmStr1{
+    font-size: 34px;
+    color: rgba(164,255,89, 1);
+}
+.pTIFrGmStr2{
+    font-size: 28px;
+    color: rgba(255, 255, 255, 1);
+}
+.payTblSym1 .pTIImg,
+.payTblSym2 .pTIImg,
+.payTblSym3 .pTIImg,
+.payTblSym13 .pTIImg{
+    z-index: 2;
+}
+/*   Pay table   */
+
+
+#fps{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 3px white;
+    color: #333333;
+    font: bold 16px/100% Tahoma;
+    left: 10px;
+    opacity: 0.75;
+    padding: 2px 3px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #28A6E1;
+    top: 10px;
+    z-index: 7;
+}
+
+@media all and (orientation:portrait){
+    #gM {
+        height: 603px;
+    }
+    #barsArea{
+        height: 603px;
+    }
+    #barsHeader, #stdHead, #freeHead, #lightBlink{
+        height: 138px;
+        width: 1024px;
+    }
+    #barsWrapper{
+        top: 82px;
+    }
+    #barsHeader{
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        display: block;
+    }
+}

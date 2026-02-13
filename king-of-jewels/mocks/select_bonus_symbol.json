@@ -1,0 +1,19 @@
+{
+  "result": [
+    {
+      "data": {
+        "bonus_symbol": 5,
+        "state": "free",
+        "free_count": 10,
+        "free_played": 0
+      },
+      "info": {
+        "credit": 100000,
+        "jackpot": 1500000,
+        "bonus": 500000,
+        "min_bet_jackpot": 2000,
+        "min_bet_bonus": 1000
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*@media not all and (orientation:portrait){*/
+    .shineKOJHead{
+        -moz-animation-name: lightIn;
+        -moz-animation-duration: 5s;
+        -moz-animation-timing-function: ease;
+        -moz-animation-iteration-count: infinite;
+
+        -webkit-animation-name: lightIn;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-iteration-count: infinite;
+
+        -ms-animation-name: lightIn;
+        -ms-animation-duration: 5s;
+        -ms-animation-timing-function: ease;
+        -ms-animation-iteration-count: infinite;
+
+        -o-animation-name: lightIn;
+        -o-animation-duration: 5s;
+        -o-animation-timing-function: ease;
+        -o-animation-iteration-count: infinite;
+
+        animation-name: lightIn;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+
+    @-moz-keyframes lightIn{
+        0%{opacity: 0;}
+        20%{opacity: 1;}
+        80%{opacity: .5;}
+        100%{opacity: 0;}
+    }
+
+    @-webkit-keyframes lightIn{
+        0%{opacity: 0;}
+        20%{opacity: 1;}
+        80%{opacity: .5;}
+        100%{opacity: 0;}
+    }
+
+    @-o-keyframes lightIn{
+        0%{opacity: 0;}
+        20%{opacity: 1;}
+        80%{opacity: .5;}
+        100%{opacity: 0;}
+    }
+
+    @-ms-keyframes lightIn{
+        0%{opacity: 0;}
+        20%{opacity: 1;}
+        80%{opacity: .5;}
+        100%{opacity: 0;}
+    }
+
+    @keyframes lightIn{
+        0%{opacity: 0;}
+        20%{opacity: 1;}
+        80%{opacity: .5;}
+        100%{opacity: 0;}
+    }
+/*}*/

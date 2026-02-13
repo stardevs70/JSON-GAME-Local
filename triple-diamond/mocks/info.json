@@ -1,0 +1,14 @@
+{
+  "result": [
+    {
+      "data": {},
+      "info": {
+        "credit": 100000,
+        "jackpot": 1500200,
+        "bonus": 500100,
+        "min_bet_jackpot": 2000,
+        "min_bet_bonus": 1000
+      }
+    }
+  ]
+}

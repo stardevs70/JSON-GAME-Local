@@ -1,0 +1,12 @@
+{
+  "name": "book-of-winners",
+  "version": "1.0.0",
+  "description": "Book of Winners - 5-reel slot game (local development build)",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

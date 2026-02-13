@@ -1,0 +1,12 @@
+{
+  "backRay": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "digits": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "lChips": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "rChips": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "lStars": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "rStars": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "rouletteBack": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "rouletteNeon": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "fixBack": "/static/resources/images/jackpot/jp-img-sprite.png",
+  "dice": "/static/resources/images/jackpot/jp-img-sprite.png"
+}

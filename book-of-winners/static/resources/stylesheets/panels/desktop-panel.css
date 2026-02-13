@@ -1,0 +1,326 @@
+@charset "utf-8";
+#gameSection{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 1);
+    overflow: hidden;
+    z-index: 1;
+    min-height: 748px;
+    min-width: 1054px;
+}
+#gameSection.scaledSize{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+#gB{
+    background-position: 0 -415px;
+    bottom: 0;
+    height: 142px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+#userMessage,#msgNoBtnWr, #msgYesBtnWr,
+#msgNoBtn:hover, #msgYesBtn:hover{
+    background: url("/static/resources/images/message/desc/user-msg-form.png") no-repeat scroll 0 0 transparent;
+}
+#userMessage{
+    background-position: 0 0;
+    height: 167px;
+    left: 50%;
+    margin: -83px 0 0 -182px;
+    position: absolute;
+    top: 50%;
+    width: 364px;
+    z-index: 999;
+}
+#msgTopText{
+    color: white;
+    font: bold 17px MyriadPro-Regular;
+    left: 20px;
+    position: absolute;
+    top: 7px;
+}
+#msgTextWr{
+    height: 68px;
+    left: 70px;
+    overflow: auto;
+    position: absolute;
+    top: 41px;
+    width: 260px;
+}
+#msgText{
+    color: #393939;
+    display: table-cell;
+    font: normal 15px Arial,Helvetica,sans-serif;
+    height: 68px;
+    text-align: center;
+    vertical-align: middle;
+    width: 260px;
+}
+#msgNoBtnWr, #msgYesBtnWr{
+    background-position: 0 -177px;
+    height: 30px;
+    position: absolute;
+    width: 86px;
+    top: 119px;
+}
+#msgNoBtnWr{
+    left: 160px;
+
+}
+#msgNoBtn, #msgYesBtn{
+    cursor: pointer;
+    display: table-cell;
+    font: 15px Arial,Helvetica,sans-serif;
+    height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 #DFDFDF;
+    vertical-align: middle;
+    width: 86px;
+}
+
+#msgNoBtn:hover, #msgYesBtn:hover{
+    background-position: -106px -177px;
+}
+#msgYesBtnWr{
+    left: 255px;
+}
+#jpbWrapper{
+    height: 104px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 769px;
+    z-index: 3;
+}
+
+#jpbMidFrame{
+    height: 91px;
+    vertical-align: top;
+    width: 778px;
+    font: bold 32px Tahoma,Geneva,sans-serif;
+}
+
+#jp{
+    float: left;
+    min-width: 365px;
+    height: 60px;
+    margin: 6px 0 0 5px;
+}
+#bonus{
+    float: right;
+    min-width: 365px;
+    margin: 6px 3px 0 0;
+    text-align: right;
+    height: 60px;
+}
+#bonus span{}
+#bonStr{}
+#bonCount{}
+#jpBonMask{
+    height: 47px;
+    position: relative;
+    top: 6px;
+    width: 100%;
+    z-index: 1;
+}
+#infoStrWr{
+    bottom: 37px;
+    height: 51px;
+    margin: 0 auto;
+    position: relative;
+    width: 751px;
+    z-index: 1;
+}
+#infoStr{
+    display: block;
+    font: 28px MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    left: 0;
+    min-height: 41px;
+    min-width: 731px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+
+    color: lightblue;
+    text-shadow: 0 0 1px darkblue;
+}
+#msgAreaWr{
+    position: absolute;
+    top: 10px;
+    width: 745px;
+    height: 40px;
+    overflow: hidden;
+}
+#msgAreaStr{
+    color: white;
+    font: 32px MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+
+    display: block;
+    left: 0;
+    min-height: 40px;
+    min-width: 745px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+}
+#userStake{
+    bottom: 28px;
+    left: 0;
+    position: absolute;
+    z-index: 4;
+}
+
+#creditBlock,
+#insBlock{
+    background-position: 0 -307px;
+    width: 230px;
+}
+
+#creditBlock{
+    margin: 0 0 2px;
+}
+#insBlock{
+}
+#betBlock .wbStrSp{}
+.simpleBtn{
+    display: inline-block;
+    width: 120px;
+}
+
+#threeBtn{
+    left: 10px;
+    position: absolute;
+    top: 31px;
+}
+.threeBtns,
+.active .threeBtns:hover
+.active .threeBtns:active,
+#gambleBtn.disabled .disBtn,
+#maxBetBtn.disabled .disBtn{
+    background: url("/static/resources/images/buttons/desk-bot-btn-sprite.png") no-repeat scroll 0 0 transparent;
+}
+.threeBtns{
+    background-position: 0 0;
+    color: #343C64;
+    display: table-cell;
+    font: 22px/80% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    height: 76px;
+    text-align: center;
+    vertical-align: middle;
+    width: 110px;
+    padding: 0;
+    cursor: pointer;
+    text-shadow: 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.active .threeBtns:hover{
+    background-position: -110px 0;
+}
+.active .threeBtns:active{
+    background-position: -220px 0;
+    padding-top: 4px;
+    padding-left: 7px;
+    height: 72px;
+    width: 103px;
+}
+#gambleBtn.disabled .disBtn,
+#maxBetBtn.disabled .disBtn{
+    background-position: -330px 0;
+    cursor: not-allowed;
+    height: 76px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 110px;
+}
+#cr{
+    bottom: 5px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+}
+#playBtns{
+    bottom: 0;
+    height: 236px;
+    position: absolute;
+    right: 0;
+    width: 170px;
+    z-index: 4;
+}
+#spinBtnStr{
+
+}
+#spinBtn.disabled{
+}
+#buttons{
+    bottom: 13px;
+    height: 130px;
+    position: absolute;
+    right: 165px;
+    width: 255px;
+    z-index: 4;
+}
+#helpOpenButton,
+#menuBtn{
+    position: absolute;
+    bottom: 24px;
+    z-index: 4;
+    height: 91px;
+    width: 82px;
+}
+#helpOpenButton{
+    bottom: 24px;
+    left: 565px;
+}
+#menuBtn{
+	bottom: 24px;
+    left: 490px;
+}
+#gameSection.originalSize{
+	margin: -374px 0 0 -527px;
+	width: 1054px;
+	height: 748px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+#gameSection {
+    min-height: 748px;
+    min-width: 1054px;
+}
+#gambleBtn, #maxBetBtn{
+    bottom: 35px;
+    position: absolute;
+    z-index: 4;
+}
+#gambleBtn{
+    right: 295px;
+}
+#maxBetBtn{
+    right: 180px;
+}
+/* fullScreen */
+#fSBtnWr{
+    right: 10px;
+    top: 10px;
+}
+#fSBtn.fSEnable,
+#fSBtn.fSDis{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#fSBtn.fSEnable{
+    background-position: -40px -424px;
+}
+#fSBtn.fSDis{
+    background-position: 0 -424px;
+}
+/* fullScreen */

@@ -1,0 +1,990 @@
+@charset "utf-8";
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#gameOverlay{
+}
+#wrapper{}
+#gameSection{
+    height: 100%;
+    width: 100%;
+
+    /*visibility: hidden;*/
+
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    background: url("/static/games/slots/roll-of-ramses/style/images/back-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 1);
+}
+#gameSection.originalSize{}
+#gameSection.scaledSize{}
+/* Game Top */
+#gT{}
+/* Game Top End*/
+
+/* Game Middle */
+#gM{
+    height: 661px;
+    left: 50%;
+    margin: 0 0 0 -440px;
+    overflow: hidden;
+    position: absolute;
+    width: 879px;
+
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+#barsArea{
+    height: 100%;
+    position: relative;
+}
+#barsHeader{
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+#barsHeader,
+#stdHead,
+#freeHead{
+    height: 114px;
+    width: 100%;
+}
+
+#stdHead,
+#freeHead,
+#barsSidesStd,
+#barsSidesFree,
+.stdSep,
+.freeSep{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -moz-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    -webkit-transition: all 300ms linear 0s;
+    -ms-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+}
+
+#stdHead{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barHead.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#freeHead{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barHeadFG.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #stdHead{
+    opacity: 0;
+}
+.freeStt #freeHead{
+    opacity: 1;
+}
+#barsWrapper{
+    height: 547px;
+    left: 0;
+    position: absolute;
+    top: 114px;
+    width: 100%;
+    z-index: 2;
+}
+#barsSides{
+    z-index: 2;
+}
+#barsSides,
+#barsSidesStd,
+#barsSidesFree,
+#lLWr{
+    height: 547px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#barsSidesStd{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barWins.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+#barsSidesFree{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barWins.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt #barsSidesStd{
+    opacity: 0;
+}
+.freeStt #barsSidesFree{
+    opacity: 1;
+}
+
+#barsCanvasWr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barBorder.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 501px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 879px;
+    z-index: 2;
+}
+
+.barsSeparator{
+    display: none;
+}
+.stdSep, .freeSep{
+    height: inherit;
+    width: inherit;
+}
+.smpBr, .stdBrBck, .freeBrBck{
+    height: 483px;
+    position: absolute;
+    top: 0;
+    width: 161px;
+}
+.smpBr{
+    top: 9px;
+}
+.stdBrBck{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barBack.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+.freeBrBck{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barBackFG.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.freeStt .stdBrBck{
+    opacity: 0;
+}
+.freeStt .freeBrBck{
+    opacity: 1;
+}
+
+#fstBr{
+    left: 9px;
+}
+#sndBr{
+    left: 184px;
+}
+#thdBr{
+    left: 359px;
+}
+#frtBr{
+    left: 534px;
+}
+#fthBr{
+    left: 709px;
+}
+
+#fstSep{
+}
+#sndSep{
+}
+#thdSep{
+}
+#frhSep{
+}
+.stdSep{
+
+}
+.freeSep{
+
+}
+
+.freeStt .stdSep{
+
+}
+.freeStt .freeSep{
+
+}
+#barsCanvas{
+    left: 9px;
+    position: absolute;
+    top: 9px;
+}
+#barsBot{
+    top: 472px;
+}
+#barsBot,
+#barsBotStd,
+#barsBotFree{
+    display: none;
+}
+#barsBotStd,
+#barsBotFree{
+    top: 0;
+}
+#barsBotStd{
+}
+#barsBotFree{
+}
+.freeStt #barsBotStd{
+
+}
+.freeStt #barsBotFree{
+
+}
+/* Game Middle End */
+
+/* Game Bottom */
+#gB{
+
+}
+#dP{
+
+}
+/* Game Bottom End */
+/* Line Lamps */
+#lLWr{
+    z-index: 2;
+    /*top: 82px;*/
+    top: 0;
+}
+
+#lSLL,
+#rSLL{
+    position: absolute;
+    top: 0;
+    width: 41px;
+    height: 100%;
+}
+#lSLL{
+    left: 0;
+}
+#rSLL{
+    right: 0;
+}
+.sLL{
+    background: url("/static/games/slots/roll-of-ramses/style/images/lampsSprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 38px;
+    position: absolute;
+    width: 41px;
+}
+.sLLAct{}
+.sLLACWR,
+.sLLAC{
+    height: 38px;
+    width: 41px;
+}
+.sLLACWR{
+    background: url("/static/games/slots/roll-of-ramses/style/images/lampsSprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sLLAct .sLLACWR{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sLLAC{
+    display: none;
+}
+.sLLAct .sLLAC{
+    font: 24px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: #000;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    text-shadow: 1px 0 rgba(255, 255, 255, .6), 1px 1px rgba(255, 255, 255, .6), 0 1px rgba(255, 255, 255, .6), -1px 1px rgba(255, 255, 255, .6), -1px 0 rgba(255, 255, 255, .6), -1px -1px rgba(255, 255, 255, .6), 0 -1px rgba(255, 255, 255, .6), 1px -1px rgba(255, 255, 255, .6);
+}
+#lL0{
+    background-position: -41px 0;
+}
+#lL1{
+    background-position: -82px 0;
+}
+#lL2{
+    background-position: -123px 0;
+}
+#lL3{
+    background-position: -164px 0;
+}
+#lL4{
+    background-position: -205px 0;
+}
+#lL5{
+    background-position: -246px 0;
+}
+#lL6{
+    background-position: -287px 0;
+}
+#lL7{
+    background-position: -328px 0;
+}
+#lL8{
+    background-position: -369px 0;
+}
+#lL9{
+    background-position: -410px 0;
+}
+#lL10{
+    background-position: -451px 0;
+}
+#lL11{
+    background-position: -492px 0;
+}
+#lL12{
+    background-position: -533px 0;
+}
+#lL13{
+    background-position: -574px 0;
+}
+#lL14{
+    background-position: -615px 0;
+}
+#lL15{
+    background-position: -656px 0;
+}
+#lL16{
+    background-position: -697px 0
+}
+#lL17{
+    background-position: -738px 0;
+}
+#lL18{
+    background-position: -779px 0;
+}
+#lL19{
+    background-position: -820px 0;
+}
+/* Line Lamps End*/
+/* Double Panel */
+#gmbP{
+    height: 501px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: 2;
+}
+#gmbPWr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/gambleBack.jpg") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 501px;
+    position: relative;
+    width: 879px;
+}
+#gmbPT{
+    left: 0;
+    position: absolute;
+    top: 34px;
+    width: 100%;
+}
+
+#gmbA,
+#gmbW{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 425px;
+}
+#gmbAStr,
+#gmbACnt,
+#gmbWStr,
+#gmbWCnt,
+#prevCStr,
+#gmbWX2Str,
+#gmbWX2Cnt{
+    font: bold 20px/100% Palatino Linotype,Book Antiqua,Palatino,serif;
+}
+#gmbAStr,
+#gmbWStr,
+#gmbWX2Str{
+    color: #fff;
+}
+
+#gmbACnt,
+#gmbWCnt,
+#gmbWX2Cnt{
+    color: #eebf1a;
+    font-size: 36px;
+}
+
+#gmbA{
+
+}
+
+#gmbAStrWr, #gmbACntWr, #gmbWStrWr, #gmbWCntWr, #gmbWX2StrWr, #gmbWX2CntWr{
+    display: table-cell;
+    vertical-align: middle;
+}
+#gmbWStrWr, #gmbWCntWr,
+#gmbWX2StrWr, #gmbWX2CntWr{
+    width: 50%;
+}
+#gmbAStrWr{
+    padding: 0 0 0 20px;
+    width: 275px;
+}
+#gmbAStr{}
+#gmbACntWr{}
+#gmbACnt{}
+#gmbW{}
+#gmbWT{}
+#gmbWStrWr{}
+#gmbWStr{}
+#gmbWCntWr{}
+#gmbWCnt{}
+
+
+#gmbWX2{}
+#gmbWX2StrWr{}
+#gmbWX2Str{}
+#gmbWX2CntWr{}
+#gmbWX2Cnt{}
+
+
+
+#gmbPM{
+    height: 200px;
+    left: 0;
+    position: absolute;
+    top: 186px;
+    width: 100%;
+}
+#gmbChsArRed{
+    left: 43px;
+}
+#gmbChsArRed,
+#gmbChsArBlack{
+    height: 198px;
+    position: absolute;
+    top: 0;
+    width: 282px;
+    left: 65px;
+}
+
+#gmbChsRC{
+}
+
+#gmbChsRC,
+#gmbChsBC,
+#gmbChsRCStrWr,
+#gmbChsBCStrWr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/color-btn-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 200px;
+    height: 147px;
+}
+
+#gmbChsRC,
+#gmbChsBC{
+    cursor: pointer;
+    left: 41px;
+    position: absolute;
+    top: 99px;
+}
+
+.active #gmbChsRCStrWr:hover,
+.active #gmbChsBCStrWr:hover{
+    opacity: 1;
+}
+
+#gmbChsRCStrWr, .disabled #gmbChsRCStrWr,
+#gmbChsBCStrWr, .disabled #gmbChsBCStrWr{
+    opacity: .7;
+}
+#gmbChsRCStrWr{
+    background-position: 0 -147px;
+}
+#gmbChsBCStrWr{
+    background-position: 0 -294px;
+}
+
+#gmbChsBCStrWr,
+#gmbChsRCStrWr{
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.gmbChsCStr{
+    font: bold 34px/147px Book Antiqua,Palatino Linotype,Palatino,serif;
+    text-shadow: 1px 0 #fff, 1px 1px #fff, 0 1px #fff, -1px 1px #fff, -1px 0 #fff, -1px -1px #fff, 0 -1px #fff, 1px -1px #fff;
+}
+.gmbChsCStrSel{
+    color: #fff;
+    display: none;
+    font: 24px/100% MyriadPro-Cond,Tahoma,Geneva,sans-serif;
+    position: absolute;
+    top: 28px;
+    width: 100%;
+    left: 0;
+}
+.sld .gmbChsCStrSel{
+    display: block;
+}
+#gmbChsRCStrWr .gmbChsCStrSel{
+    text-shadow: 1px 0 rgba(114,0,0, .6), 1px 1px rgba(114,0,0, .6), 0 1px rgba(114,0,0, .6), -1px 1px rgba(114,0,0, .6), -1px 0 rgba(114,0,0, .6), -1px -1px rgba(114,0,0, .6), 0 -1px rgba(114,0,0, .6), 1px -1px rgba(114,0,0, .6);
+
+}
+#gmbChsBCStrWr .gmbChsCStrSel{
+    text-shadow: 1px 0 rgba(0,0,0, .6), 1px 1px rgba(0,0,0, .6), 0 1px rgba(0,0,0, .6), -1px 1px rgba(0,0,0, .6), -1px 0 rgba(0,0,0, .6), -1px -1px rgba(0,0,0, .6), 0 -1px rgba(0,0,0, .6), 1px -1px rgba(0,0,0, .6);
+}
+#gmbChsRCStrWr .gmbChsCStr{
+    color: #D00000;
+}
+#gmbChsBCStrWr .gmbChsCStr{
+    color: #000;
+}
+.gmbChsDisC{
+    display: none;
+}
+.disabled .gmbChsDisC{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/color-btn-mask.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: not-allowed;
+    display: block;
+    height: 147px;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 1px;
+    width: 200px;
+}
+#gmbChsResC{}
+
+#gmbChsResC,
+#gmbChsResCBack,
+#gmbChsResCFront{
+    height: 230px;
+    width: 156px;
+}
+
+#gmbChsResC{
+    left: 362px;
+    position: absolute;
+    top: 20px;
+}
+
+#gmbChsResC div{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#gmbChsResC .c0{
+
+}
+#gmbChsResC .c1{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardBig1.png") no-repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c2{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardBig2.png") no-repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c3{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardBig3.png") no-repeat scroll 0 0 transparent;
+}
+#gmbChsResC .c4{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardBig4.png") no-repeat scroll 0 0 transparent;
+}
+
+#gmbChsResCBack{}
+#gmbChsResCFront.su0{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardBig0.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#gmbChsResCFront.su00{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardBig00.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c0{}
+.su0{}
+#gmbChsArBlack{
+    left: 535px;
+}
+
+#gmbChsBC{
+}
+#gmbChsBCStrWr{}
+
+
+
+
+#gmbPB{
+    height: 69px;
+    left: 0;
+    position: absolute;
+    top: 120px;
+    width: 100%;
+}
+
+#gmbPBLs{
+    left: 0;
+    width: 370px;
+}
+#gmbPBRs{
+    right: 0;
+    width: 480px;
+}
+#gmbPBLs,
+#gmbPBRs{
+    height: 69px;
+    position: absolute;
+    top: 0;
+}
+
+#gmbPBLsWr{
+    height: 37px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+#prevCStrL,
+#prevCStrM,
+#prevCStrR{
+    display: table-cell;
+    height: 37px;
+    vertical-align: middle;
+    text-align: center;
+}
+#prevCStrL{
+    width: 15px;
+}
+#prevCStrM{
+}
+#prevCStrR{
+    width: 15px;
+}
+#prevCStr{
+    padding: 0 10px;
+    font-size: 25px;
+    color: #dd5151;
+}
+
+
+#gmbPBRsWr{
+    height: 69px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+.prevCardItem{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/prevCardsBack.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    float: left;
+    height: 69px;
+    width: 69px;
+    margin: 0 3px 0 0;
+}
+.c1 .prevCardItemFrame{
+
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardSmall1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c2 .prevCardItemFrame{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardSmall2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c3 .prevCardItemFrame{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardSmall3.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.c4 .prevCardItemFrame{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/cardSmall4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.prevCardItemFrame{
+    height: 69px;
+    width: 69px;
+}
+
+#smlBtnHrts, #smlBtnDmnd, #smlBtnClbs, #smlBtnSpds,
+#smlBtnHrtsWr, #smlBtnDmndWr, #smlBtnClbsWr, #smlBtnSpdsWr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suitBtnBackStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 99px;
+    width: 141px;
+}
+#smlBtnHrts, #smlBtnDmnd, #smlBtnClbs, #smlBtnSpds{
+    position: absolute;
+}
+#smlBtnHrtsWr, #smlBtnDmndWr, #smlBtnClbsWr, #smlBtnSpdsWr{
+    cursor: pointer;
+    position: relative;
+}
+.active #smlBtnHrtsWr:hover,
+.active #smlBtnDmndWr:hover,
+.active #smlBtnClbsWr:hover,
+.active #smlBtnSpdsWr:hover{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suitBtnBackHov.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.active #smlBtnHrtsWr:active,
+.active #smlBtnDmndWr:active,
+.active #smlBtnClbsWr:active,
+.active #smlBtnSpdsWr:active{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suitBtnBackAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#smlBtnHrts .smlBtnChColDis,
+#smlBtnDmnd .smlBtnChColDis,
+#smlBtnClbs .smlBtnChColDis,
+#smlBtnSpds .smlBtnChColDis{
+    display: none;
+}
+#smlBtnHrts.disabled .smlBtnChColDis,
+#smlBtnDmnd.disabled .smlBtnChColDis,
+#smlBtnClbs.disabled .smlBtnChColDis,
+#smlBtnSpds.disabled .smlBtnChColDis{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suit-btn-mask.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 99px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 141px;
+    cursor: not-allowed;
+}
+
+#gmbChsArRedSBs{
+    height: 99px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#smlBtnHrtsWr{}
+.smlBtnChColStr{
+    display: block;
+    height: 68px;
+    width: 64px;
+    position: absolute;
+    top: 15px;
+    left: 38px;
+}
+.smlBtnChColSel{
+
+}
+#smlBtnHrts .smlBtnChColSel,
+#smlBtnDmnd .smlBtnChColSel,
+#smlBtnClbs .smlBtnChColSel,
+#smlBtnSpds .smlBtnChColSel{
+    display: none;
+}
+
+#smlBtnHrts .sld .smlBtnChColSel,
+#smlBtnDmnd .sld .smlBtnChColSel,
+#smlBtnClbs .sld .smlBtnChColSel,
+#smlBtnSpds .sld .smlBtnChColSel{
+    display: block;
+    font: 24px/99px MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    opacity: .7;
+    text-shadow:    1px 0 rgba(255, 255, 255, .8),
+                    1px 1px rgba(255, 255, 255, .8),
+                    0 1px rgba(255, 255, 255, .8),
+                    -1px 1px rgba(255, 255, 255, .8),
+                    -1px 0 rgba(255, 255, 255, .8),
+                    -1px -1px rgba(255, 255, 255, .8),
+                    0 -1px rgba(255, 255, 255, .8),
+                    1px -1px rgba(255, 255, 255, .8);
+}
+#smlBtnHrts, #smlBtnClbs{
+    left: 0;
+}
+#smlBtnDmnd, #smlBtnSpds{
+    right: 0;
+}
+#smlBtnDmndWr{}
+.smlBtnChColDis{}
+
+#smlBtnHrts .smlBtnChColStr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suit3.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#smlBtnDmnd .smlBtnChColStr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suit4.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#smlBtnClbs .smlBtnChColStr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suit2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#smlBtnSpds .smlBtnChColStr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suit1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+/* Double Panel End*/
+
+
+
+/* Free Games Panel*/
+#fGP{
+    display: none;
+    height: 357px;
+    left: 50%;
+    margin: -178px 0 0 -317px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 634px;
+    z-index: 3;
+}
+#fGPWr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/fgInfoPanel.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    height: 357px;
+    position: absolute;
+    width: 634px;
+}
+#fGPCntWr{
+    height: 150px;
+    left: 80px;
+    position: absolute;
+    top: 60px;
+    width: 474px;
+    overflow: auto;
+}
+#fGPCnt{
+    display: table-cell;
+    height: 150px;
+    width: 474px;
+    vertical-align: middle;
+    text-align: center;
+
+    font: bold 30px/100% Palatino Linotype,Book Antiqua,Palatino,serif;
+}
+
+/**/
+.bigSStr{
+    color: #000;
+    font-size: 50px;
+}
+.midSStr{
+    color: #000;
+    font-size: 40px;
+}
+.smlSStr{
+    color: #6f1c1c;
+}
+#rollElWr{
+    background: url("/static/games/slots/roll-of-ramses/style/images/fgRoll.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 132px;
+    left: 50%;
+    margin: 0 0 0 -73px;
+    position: absolute;
+    top: 346px;
+    width: 157px;
+    z-index: 3;
+    /*display: none;*/
+}
+#rollEl{
+    background: url("/static/games/slots/roll-of-ramses/style/images/smallSymbolSprite.png") no-repeat scroll 78px 0 rgba(0, 0, 0, 0);
+    height: 76px;
+    left: 33px;
+    position: relative;
+    top: 23px;
+    width: 78px;
+}
+.bSId1 #rollEl{
+    background-position: 0 0;
+}
+.bSId2 #rollEl{
+    background-position: -78px 0;
+}
+.bSId3 #rollEl{
+    background-position: -156px 0;
+}
+.bSId4 #rollEl{
+    background-position: -234px 0;
+}
+.bSId5 #rollEl{
+    background-position: -312px 0;
+}
+.bSId6 #rollEl{
+    background-position: -390px 0;
+}
+.bSId7 #rollEl{
+    background-position: -468px 0;
+}
+.bSId8 #rollEl{
+    background-position: -546px 0;
+}
+.bSId9 #rollEl{
+    background-position: -624px 0;
+}
+/* Free Games Panel End*/
+/* Pay Table */
+
+.pTIFrGmStr1,.pTIFrGmStr2,.pTIFrGmStr3,.pTIFrGmStr4,.pTIFrGmStr5{
+    font: bold 20px/100% MyriadPro-BoldCond,Tahoma,Geneva,sans-serif;
+    color: rgba(255, 255, 255, 1);
+}
+
+.pTIFrGmStr1{
+    margin: 15px 0 0 0;
+    display: block;
+}
+.pTIFrGmStr2{
+    background: url("/static/games/slots/roll-of-ramses/style/images/ror-pay-table-arrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: 5px 0 0 0;
+
+}
+.pTIFrGmStr3{
+    display: block;
+    color: rgba(164,255,89, 1);
+    font-size: 30px;
+}
+.pTIFrGmStr4{
+    color: rgba(233,92,251, 1);
+    font-size: 44px;
+}
+.pTIFrGmStr5{
+    background: url("/static/games/slots/roll-of-ramses/style/images/ror-pay-table-plus.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    width: 100%;
+    height: 28px;
+}
+.pTIFrGmStr6{
+    position: absolute;
+    background: url("/static/games/slots/roll-of-ramses/style/images/ror-pay-table-roll.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    bottom: 15px;
+    width: 100%;
+    height: 30px;
+}
+.pTIImg{
+    background: url("/static/games/slots/roll-of-ramses/style/images/barBack.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.payTblSym1 .pTIImg,
+.payTblSym2 .pTIImg,
+.payTblSym10 .pTIImg{
+    z-index: 2;
+}
+/* Pay Table */
+
+@media not all and (orientation:portrait){
+    #barsHeader, #stdHead, #freeHead {
+        display: none;
+    }
+    #barsSides{
+        display: none;
+    }
+    #lLWr,
+    #gM{
+        height: 501px;
+        width: 959px;
+    }
+    #gM{
+        margin: 0 0 0 -480px;
+    }
+    #barsWrapper{
+        top: 0;
+        height: 501px;
+    }
+    #barsCanvasWr{
+        left: 40px;
+    }
+    #gmbP{
+        right: 40px;
+    }
+    #lSLL {
+        left: 0;
+    }
+    #rSLL {
+        right: 0;
+    }
+}

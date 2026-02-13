@@ -1,0 +1,696 @@
+ 
+<!DOCTYPE html>
+<html data-device="desktop">
+<head>
+    <meta charset="utf-8">
+    <title data-trw="LuckyLadyGlamour">Lucky Lady Glamour</title>
+
+    <meta name="viewport" content="minimal-ui, shrink-to-fit=no;">
+	
+    <link rel="stylesheet" href="/static/resources/stylesheets/reset.css" media="all">
+    <link rel="stylesheet" href="/static/resources/stylesheets/options-panel.css" media="all">
+	<link rel="stylesheet" href="/static/resources/stylesheets/options-panel-port.css" media="(orientation: portrait)" />
+	<link rel="stylesheet" href="/static/resources/stylesheets/swipe-hand-animation.css" media="all">
+
+	<link rel="stylesheet" href="/static/games/slots/lucky-lady-glamour/style/animation.css" media="all">
+	
+	
+
+	
+	<link rel="stylesheet" href="/static/resources/stylesheets/panels/common-rules.css" media="all" />
+
+	
+    <link rel="stylesheet" href="/static/resources/stylesheets/panels/desktop-panel.css" media="all" />
+    <link rel="stylesheet" href="/static/games/slots/lucky-lady-glamour/style/bars-styles.css" media="all" />
+    
+
+	
+
+
+
+    <script type="text/javascript">
+        localStorage.setItem('gsid', 'local-dev-session-mock');
+        localStorage.setItem('slnk', '/gp2/app/');
+        localStorage.setItem('back_url', '/');
+    </script>
+
+	<!-- ?ts=1770945304 -->
+</head>
+
+<body>
+    <div id="gameOverlay">
+        <div id="wrapper">
+            <div id="gameSection" class="scaledSize"> <!--  originalSize-->
+
+                <div id="gT"><!-- Game Top --></div>
+
+				<div id="fSBtnWr">	<!-- fullscreen btn -->
+					<div id="fSBtn"></div>
+				</div>
+				
+                <div id="menuBtn" class="active">
+                    <span id="menuBtnStr"><!-- data-trw="menu">MENU--></span>
+                    <div class="disBtn"></div>
+                </div>
+
+                <div id="helpOpenButton">
+                    <div id="helpBtnStrWr">
+                        <span id="helpStr"><!-- data-trw="help">HELP--></span>
+						<div class="disBtn"></div>
+                    </div>
+                </div>
+
+                <div id="jpbWrapper">
+
+                    <div id="jpbLeftFrame" class="jpbFrames"></div>
+                    <div id="jpbMidFrame" class="jpbFrames">
+                        <div id="jp" class="active">
+                            <span id="jpStr" data-trw="topJP">JACKPOT</span>
+                            <span id="jpCount">1,000.00</span>
+                        </div>
+                        <div id="bonus" class="active">
+                            <span id="bonStr" data-trw="topBon">BONUS</span>
+                            <span id="bonCount">1,000.00</span>
+                        </div>
+                        <div id="msgAreaWr">
+                            <span id="msgAreaStr"></span>
+                        </div>
+                        <div id="jpBonMask"></div>
+                    </div>
+                    <div id="jpbRightFrame" class="jpbFrames"></div>
+                    <div id="infoStrWr">
+                        <div id="visibleInfo">
+                            <span id="infoStr" class="linearBlink" data-trw="infoWelcome"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gM"><!-- Game Middle -->
+					<div id="barsArea">
+						<div id="barsHeader">
+							<div id="stdHead"></div>
+							<div id="freeHead"></div>
+						</div>
+						<div id="barsWrapper">
+							<div id="barsSides">
+								<div id="barsSidesStd"></div>
+								<div id="barsSidesFree"></div>
+							</div>
+							
+							<div id="barsCanvasWr">
+								<div id="fstBr" class="smpBr">
+									<div class="stdBrBck"></div>
+									<div class="freeBrBck"></div>
+								</div>
+							
+								<div id="fstSep" class="barsSeparator">
+									<div class="stdSep"></div>
+									<div class="freeSep"></div>
+								</div>
+								
+								<div id="sndBr" class="smpBr">
+									<div class="stdBrBck"></div>
+									<div class="freeBrBck"></div>
+								</div>
+								
+								<div id="sndSep" class="barsSeparator">
+									<div class="stdSep"></div>
+									<div class="freeSep"></div>
+								</div>
+								
+								<div id="thdBr" class="smpBr">
+									<div class="stdBrBck"></div>
+									<div class="freeBrBck"></div>
+								</div>
+								
+								<div id="thdSep" class="barsSeparator">
+									<div class="stdSep"></div>
+									<div class="freeSep"></div>
+								</div>
+								
+								<div id="frtBr" class="smpBr">
+									<div class="stdBrBck"></div>
+									<div class="freeBrBck"></div>
+								</div>
+								
+								<div id="frhSep" class="barsSeparator">
+									<div class="stdSep"></div>
+									<div class="freeSep"></div>
+								</div>
+								
+								<div id="fthBr" class="smpBr">
+									<div class="stdBrBck"></div>
+									<div class="freeBrBck"></div>
+								</div>
+								
+								<canvas id="barsCanvas"></canvas><!-- width="861" height="483" -->
+							</div>
+							
+							<div id="lLWr"><!-- Line Lamps -->
+								<div id="lSLL"></div>
+								<div id="rSLL"></div>
+							</div>
+
+							<div id="gmbP">
+								<div id="gmbPWr">
+									<div id="gmbPT">
+										<div id="gmbA">
+											<div id="gmbAStrWr">
+												<span id="gmbAStr" data-trw="gmbAmnt">GAMBLE AMOUNT</span>
+											</div>
+											<div id="gmbACntWr">
+												<span id="gmbACnt">0</span>
+											</div>
+										</div>
+
+										<div id="gmbW">
+											<div id="gmbWT">
+												<div id="gmbWStrWr">
+													<span id="gmbWStr" data-trw="gmbWin">GAMBLE TO WIN</span>
+												</div>
+												<div id="gmbWCntWr">
+													<span id="gmbWCnt">0</span>
+												</div>
+											</div>
+											
+											<div id="gmbWX2">
+												<div id="gmbWX2StrWr">
+													<span id="gmbWX2Str" data-trw="gmbWinSuit">GAMBLE TO WIN</span>
+												</div>
+												<div id="gmbWX2CntWr">
+													<span id="gmbWX2Cnt">0</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="gmbPM">
+										<div id="gmbChsArRed"><!--  class='disabled' -->
+
+											<div id="gmbChsRC">
+												<div id="gmbChsRCStrWr">
+													<span class="gmbChsCStr" data-trw="red">RED</span>
+													<span class="gmbChsCStrSel" data-trw="seltd">SELECTED</span>
+												</div>
+												<div id="gmbChsRCDis" class="gmbChsDisC"></div>
+											</div>
+											
+											
+											
+											
+											
+											<div id="gmbChsArRedSBs">	<!-- small buttons red -->
+												<div id="smlBtnHrts">
+													<div id="smlBtnHrtsWr">
+														<span class="smlBtnChColStr"></span>
+														<span class="smlBtnChColSel" data-trw="seltd">SELECTED</span>
+													</div>
+													<div class="smlBtnChColDis"></div>
+												</div>
+												
+												<div id="smlBtnDmnd">
+													<div id="smlBtnDmndWr">
+														<span class="smlBtnChColStr"></span>
+														<span class="smlBtnChColSel" data-trw="seltd">SELECTED</span>
+													</div>
+													<div class="smlBtnChColDis"></div>
+												</div>
+											</div>
+											
+										</div>
+										
+
+										<div id="gmbChsResC" class="flipped">
+											<div id="gmbChsResCBack" class="c0"></div>
+											<div id="gmbChsResCFront" class="su0"></div>
+										</div>
+
+										<div id="gmbChsArBlack"><!--  class='disabled' -->
+											<div id="gmbChsBC">
+												<div id="gmbChsBCStrWr">
+													<span class="gmbChsCStr" data-trw="black">BLACK</span>
+													<span class="gmbChsCStrSel" data-trw="seltd">SELECTED</span>
+												</div>
+												<div id="gmbChsBCDis" class="gmbChsDisC"></div>
+											</div>
+											
+											<div id="gmbChsArBlackSBs">	<!-- small buttons red -->
+												<div id="smlBtnClbs">
+													<div id="smlBtnClbsWr">
+														<span class="smlBtnChColStr"></span>
+														<span class="smlBtnChColSel" data-trw="seltd">SELECTED</span>
+													</div>
+													<div class="smlBtnChColDis"></div>
+												</div>
+												
+												<div id="smlBtnSpds">
+													<div id="smlBtnSpdsWr">
+														<span class="smlBtnChColStr"></span>
+														<span class="smlBtnChColSel" data-trw="seltd">SELECTED</span>
+													</div>
+													<div class="smlBtnChColDis"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="gmbPB">
+										<div id="gmbPBLs">
+											<div id="gmbPBLsWr">
+												<div id="prevCStrL"></div>
+												<div id="prevCStrM">
+													<span id="prevCStr" data-trw="prevCards">PREVIOUS CARDS</span>
+												</div>
+												<div id="prevCStrR"></div>
+											</div>
+										</div>
+										<div id="gmbPBRs">
+											<div id="gmbPBRsWr">
+												<div class="prevCardItem c1">
+													<div class="prevCardItemFrame"></div>
+												</div>
+												
+												<div class="prevCardItem c2">
+													<div class="prevCardItemFrame"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div id="barsBot">
+							<div id="barsBotStd"></div>
+							<div id="barsBotFree"></div>
+						</div>
+						
+						<div id="fGP"><!-- Free Games Panel -->
+							<div id="fGPWr">
+								<div id="fGPCntWr">
+									<div id="fGPCnt"><!-- Free Game Panel Content --></div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+
+                <div id="userStake">
+                    <div id="userStakeFields">
+                        <div id="crIns">
+                            <div id="creditBlock">
+                                <span class="fieldStr" data-trw="credit">CREDIT</span>
+                                <span class="fieldCount">0</span>
+                                <span class="fieldRealCount">0</span>
+                            </div>
+                            <div id="insBlock">
+                                <span class="fieldStr" data-trw="insurance">INSURANCE</span>
+                                <span class="fieldCount">0</span>
+                                <span class="fieldRealCount">0</span>
+                            </div>
+                        </div>
+                        <div id="betWin">
+                            <div id="betBlock">
+                                <div class="wbStr">
+                                    <span class="wbStrSp" data-trw="bet">BET</span>
+                                </div>
+                                <div class="wbCount">
+                                    <span class="wbCountSp">0</span>
+									<span class="fieldRealCount">0</span>
+                                </div>
+                            </div>
+                            <div id="winBlock">
+                                <div class="wbStr">
+                                    <span class="wbStrSp" data-trw="win">WIN</span>
+                                </div>
+
+                                <div class="wbCount">
+                                    <span class="wbCountSp">0</span>
+									<span class="fieldRealCount">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	
+                            <div id="gambleBtn" class="disabled">
+                                <span id="gambleStr" class="threeBtns" data-trw="gamble">GAMBLE</span>
+
+                                <div class="disBtn"></div>
+                            </div>
+
+                            <div id="maxBetBtn" class="disabled">  <!-- class="disabled"-->
+								<div id="maxBetBtnArrow"></div>
+                                <span id="maxBetStr" class="threeBtns" data-trw="maxBet">MAXBET</span>
+                                <div class="disBtn"></div>
+                            </div>
+
+				<div id="playBtns">
+					<div id="autoBtn" class="disabled">
+						<span id="autoStr" data-trw="auto">AUTO</span>
+						<div class="disBtn"></div>
+					</div>
+						
+					<div id="spinBtn" class="disabled">
+						<div id="spinBtnArrows"></div>
+							<span id="spinBtnStr" data-trw="spin">SPIN</span><!-- data-trw="spin"-->
+						<div class="disBtn"></div>
+					</div>
+				</div>
+
+                <div id="gB"> <!-- Game Bottom -->
+
+
+                    <!-- Down Panel -->
+                    <div id="dP">
+                        <div id="cr">
+                            <span data-trw="powBy"></span>
+                        </div>
+                    </div>
+
+                </div>
+				
+				
+
+				<!-- OPTIONS PANEL -->
+								<div id="optPanWr">
+					<div id="optPan">
+						<div id="optPanCont">
+							<div id="optPanTop">
+								<ul>
+									<li id="optItemGmSts">
+										<div class="optItemTop">
+											<div class="optItemIcoWr">
+												<div class="optItemIco"></div>
+											</div>
+										</div>
+										<div class="optItemBot">
+											<div class="optItemStrWr">
+												<span class="optItemStr" data-trw="gameSets">GAME SETTINGS</span>
+											</div>
+										</div>
+									</li>
+									<li id="optItemLng">
+										<div class="optItemTop">
+											<div class="optItemIcoWr">
+												<div id="optItemLangIco"></div>
+											</div>
+										</div>
+										<div class="optItemBot">
+											<div class="optItemStrWr">
+												<span class="optItemStr" data-trw="lang">LANGUAGE</span>
+											</div>
+										</div>
+									</li>
+									<li id="optItemSnd">
+										<div class="optItemTop">
+											<div class="optItemIcoWr">
+												<div class="optItemIco"></div>
+											</div>
+										</div>
+										<div class="optItemBot">
+											<div class="optItemStrWr">
+												<span class="optItemStr" data-trw="snd">SOUND</span>
+											</div>
+										</div>
+									</li>
+									<li id="optItemInf">
+										<div class="optItemTop">
+											<div class="optItemIcoWr">
+												<div class="optItemIco"></div>
+											</div>
+										</div>
+										<div class="optItemBot">
+											<div class="optItemStrWr">
+												<span class="optItemStr" data-trw="payTbl">PAYTABLE</span>
+											</div>
+										</div>
+									</li>
+									
+									<li class="clear">
+									</li>
+								</ul> 
+								<div id="optPanClsBtn">
+									<div id="optPanClsBtnStr"></div>
+									<div class="disBtn"></div>
+								</div>
+							</div>
+							<div id="optPanBot">
+								<div id="optPanGSTab">
+									<div id="optPanGSTabCont">
+
+										<div id="betSetsWr">
+											<div id="bSLine" class="bSItem">
+												<div class="bSItemWr">
+													<div class="bSLeft" id="bSLineMin">
+														<div class="bSLeftArrow">
+															<span class="bSMin" id="bSLineMinStr"></span>
+														</div>
+													</div>
+													<div class="bSMid">
+														<div class="bSBtnWr">
+															<div class="bSItemDesc">
+																<span class="bSItemDescStr" data-trw="lines">LINES</span>
+															</div>
+															
+															<div class="bSBtnTop">
+																<span class="bSBtnTopStr" id="bSLineCnt">20</span>
+															</div>
+															<div class="bSBtnBot">
+																<span class="bSBtnBotStr" id="plLnsCnt"></span>
+															</div>
+														</div>
+													</div>
+													<div class="bSRight" id="bSLinePlus">
+														<div class="bSRightArrow">
+															<span class="bSPlus" id="bSLinePlusStr"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="bSBet" class="bSItem">
+												<div class="bSItemWr">
+													<div class="bSLeft" id="bSBetMin">
+														<div class="bSLeftArrow">
+															<span class="bSMin" id="bSBetMinStr"></span>
+														</div>
+													</div>
+													<div class="bSMid">
+														<div class="bSBtnWr">
+															<div class="bSItemDesc">
+																<span class="bSItemDescStr" data-trw="betOnLine">BET ON LINE</span>
+															</div>
+															
+															<div class="bSBtnTop">
+																<span class="bSBtnTopStr" id="bSBOL">100</span>
+															</div>
+															<div class="bSBtnBot">
+																<span class="bSBtnBotStr">
+																	<span id="bSBOLReal">100</span> <span id="bSBOLCur">EUR</span>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="bSRight" id="bSBetPlus">
+														<div class="bSRightArrow">
+															<span class="bSPlus" id="bSBetPlusStr"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="bSDen" class="bSItem">
+												<div class="bSItemWr">
+													<div class="bSLeft" id="bSDenMin">
+														<div class="bSLeftArrow">
+															<span class="bSMin" id="bSDenMinStr"></span>
+														</div>
+													</div>
+													<div class="bSMid">
+														<div class="bSBtnWr">
+															<div class="bSItemDesc">
+																<span class="bSItemDescStr" data-trw="denom">DENOMINATION</span>
+															</div>
+															
+															<div class="bSBtnTop">
+																<span class="bSBtnTopStr" id="bSDenReal">0.01</span>
+															</div>
+															<div class="bSBtnBot">
+																<span class="bSBtnBotStr" id="bSDenCur">EUR</span>
+															</div>
+														</div>
+													</div>
+													<div class="bSRight" id="bSDenPlus">
+														<div class="bSRightArrow">
+															<span class="bSPlus" id="bSDenPlusStr"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div id="optPanLTab">
+									<div id="optPanLTabCont">										
+										<div id="lngWr">
+											<div id="lngIcns">
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div id="optPanSTab">
+									<div id="optPanSTabCont">
+									
+										<div id="sndTabWr">
+											<div id="sndPnlWr">
+												<div id="sndPnl">
+													<div id="sndPnlCont">
+														
+														<div id="spkrIcoWr">
+															<div id="spkrIco"></div>
+														</div>
+														
+														<div id="sndPnlStrWr">
+															<span id="sndPnlStr" data-trw="gmSnd">GAME SOUNDS</span>
+														</div>
+														
+														<div id="sndPnlSlideArea">
+															<div id="sndPnlSldArLeft">
+																<span id="sndPnlOffStr" data-trw="sndOff">OFF</span>
+															</div>
+															<div id="sndPnlSldArRight">
+																<span id="sndPnlOnStr" data-trw="sndOn">ON</span>
+															</div>
+															
+															<div id="sndPnlSliderWr">
+																<div id="sndPnlSlider"></div>
+															</div>
+															
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div id="optPanPTTab">
+									<div id="optPanPTTabCont">
+
+									</div>
+								</div>
+								<div id="optPanTCTab">
+									<div id="optPanTCTabCont">
+										
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- OPTIONS PANEL -->
+				
+            </div>
+        </div>
+
+    </div>
+
+<!-- controls="controls"--> 
+	<audio id="commonSounds" preload="auto" style="display:none;z-index:-1;position:absolute;"><!---->
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/_common/sounds/main-sound.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/_common/sounds/main-sound.ogg"/>
+	</audio>
+
+
+
+	
+        	<audio id="gameSounds" preload="auto">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/lucky-lady-glamour/sounds/game-sounds.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/lucky-lady-glamour/sounds/game-sounds.ogg"/>
+	</audio>
+
+	<audio id="scttr1" preload="auto">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter1.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter1.ogg"/>
+	</audio>
+
+	<audio id="scttr2" preload="auto">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter2.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter2.ogg"/>
+	</audio>
+
+	<audio id="scttr3" preload="auto">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter3.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter3.ogg"/>
+	</audio>
+
+	<audio id="scttr4" preload="auto">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter4.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter4.ogg"/>
+	</audio>
+
+	<audio id="scttr5" preload="auto">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter5.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/lucky-lady-glamour/sounds/scatter5.ogg"/>
+	</audio>
+	
+
+	<!-- controls="controls"-->
+	<audio id="barStpSnd" preload="auto" style="display:none;z-index:-1;position:absolute;">
+		<source type='audio/mpeg; codecs="mp3"' src="/static/games/slots/_common/sounds/bar-stop-sound.mp3"/>
+		<source type='audio/ogg; codecs="vorbis"' src="/static/games/slots/_common/sounds/bar-stop-sound.ogg"/>
+	</audio>
+
+    
+
+    <script>
+
+        (function(){
+            (function(i,s,o,g,r,a,m){
+                i['GoogleAnalyticsObject']=r;
+                i[r]=i[r]||function(){
+                            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+                            a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];
+                            a.async=1;
+                            a.src=g;
+                            m.parentNode.insertBefore(a,m);
+
+
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63371625-1', 'auto');
+              ga('send', 'pageview');
+
+        }());
+
+    </script>
+
+	
+	
+        
+            
+                <script type="text/javascript">
+                    // Debug: catch JS errors to diagnose spin freeze
+                    var _errLog = [];
+                    window.onerror = function(msg, src, line, col, err) {
+                        var e = line + ':' + col + ' ' + msg;
+                        _errLog.push(e);
+                        var d = document.getElementById('_errBox');
+                        if (!d) {
+                            d = document.createElement('div');
+                            d.id = '_errBox';
+                            d.style.cssText = 'position:fixed;top:0;left:0;right:0;background:rgba(255,0,0,0.9);color:#fff;font:12px monospace;padding:4px 8px;z-index:99999;max-height:30%;overflow:auto;';
+                            document.body.appendChild(d);
+                        }
+                        d.innerHTML = _errLog.map(function(x){return x;}).join('<br>');
+                    };
+                </script>
+                <script type="text/javascript" src="/static/compressed_js/games/lucky-lady-glamour/js/00bddaf8edea04312b1e9472eb6588e8.js"></script>
+	        
+		
+    
+</body>
+
+</html>
