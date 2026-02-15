@@ -30,7 +30,7 @@ body {
 #jpBonMask,
 #gT,
 #gB{
-    background: url("../../images/panel/patterns-sprite.png") repeat-x scroll 0 0 transparent;
+    background: url("/static/resources/images/panel/patterns-sprite.png") repeat-x scroll 0 0 transparent;
 }
 
 #gT{
@@ -53,7 +53,7 @@ body {
     overflow: hidden;
 }
 #lmb{
-    background: url("../../images/loading/loading_bg.jpg") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/loading/loading_bg.jpg") no-repeat scroll 0 0 transparent;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,7 +111,7 @@ body {
 #jp,
 #bonus,
 #infoStrWr{
-    background: url("../../images/panel/jackpot/jp-img-sprite.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/panel/jackpot/jp-img-sprite.png") no-repeat scroll 0 0 transparent;
 }
 #jpbMidFrame{
     background-position: 0 0;
@@ -258,13 +258,13 @@ body {
     text-shadow: 0 0 3px rgb(255, 255, 0);
 }
 #jpwP.jpwSl1{
-    background: url("../../images/panel/jackpot/jp_1.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/panel/jackpot/jp_1.png") no-repeat scroll 0 0 transparent;
 }
 #jpwP.jpwSl2{
-    background: url("../../images/panel/jackpot/jp_2.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/panel/jackpot/jp_2.png") no-repeat scroll 0 0 transparent;
 }
 #jpwP.jpwSl3{
-    background: url("../../images/panel/jackpot/jp_3.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/panel/jackpot/jp_3.png") no-repeat scroll 0 0 transparent;
 }
 */
 #userStakeFields{
@@ -288,7 +288,7 @@ body {
 #insBlock,
 #fSBtn.fSEnable,
 #fSBtn.fSDis{
-    background: url("../../images/panel/panel-elements-sprite.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/panel/panel-elements-sprite.png") no-repeat scroll 0 0 transparent;
 }
 
 #creditBlock,
@@ -413,7 +413,7 @@ body {
 #menuBtnStr.logOut,
 #helpStr,
 #optPanClsBtn{
-    background: url("../../images/buttons/btns-sprite.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/buttons/btns-sprite.png") no-repeat scroll 0 0 transparent;
 }
 #spinBtn{
     background-position: -501px -20px;

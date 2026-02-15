@@ -1,12 +1,12 @@
 @charset "utf-8";
 @font-face{
-	font-family: 'MyriadPro-BoldCond';src: local('MyriadProBoldCondensed'), url('../fonts/myriad/MyriadPro-BoldCond.woff') format('woff');
+	font-family: 'MyriadPro-BoldCond';src: local('MyriadProBoldCondensed'), url('/static/resources/fonts/myriad/MyriadPro-BoldCond.woff') format('woff');
 }
 @font-face{
-	font-family: 'MyriadPro-Cond';src: local('MyriadProCondensed'), url('../fonts/myriad/MyriadPro-Cond.woff') format('woff');
+	font-family: 'MyriadPro-Cond';src: local('MyriadProCondensed'), url('/static/resources/fonts/myriad/MyriadPro-Cond.woff') format('woff');
 }
 @font-face{
-	font-family: 'MyriadPro-Regular';src: local('MyriadProRegular'), url('../fonts/myriad/MyriadPro-Regular.woff') format('woff');
+	font-family: 'MyriadPro-Regular';src: local('MyriadProRegular'), url('/static/resources/fonts/myriad/MyriadPro-Regular.woff') format('woff');
 }
 
 html, body, div, span, applet, object, iframe,

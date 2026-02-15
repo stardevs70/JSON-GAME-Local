@@ -1,6 +1,6 @@
 @charset "utf-8";
 #brPHid{
-    background: url("../images/hide-bar/swipe-top-hand.png") no-repeat scroll center 350px rgba(0, 0, 0, 0.5);
+    background: url("/static/resources/images/hide-bar/swipe-top-hand.png") no-repeat scroll center 350px rgba(0, 0, 0, 0.5);
     opacity: 0;
     z-index: 0;
     height: 1500px;

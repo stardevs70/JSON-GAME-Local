@@ -19,7 +19,7 @@ html, body{
     -ms-transform-origin: center center;
     transform-origin: center center;
 
-    background: url("images/back-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/rich-fruits/style/images/back-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 #gameSection.originalSize{}
 #gameSection.scaledSize{}
@@ -48,7 +48,7 @@ html, body{
     position: relative;
 }
 #barsHeader{
-    background: url("images/head.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/rich-fruits/style/images/head.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     left: 0;
     position: absolute;
     top: 0;
@@ -124,7 +124,7 @@ html, body{
 }
 
 #barsCanvasWr{
-    background: rgba(0, 0, 0, 0) url("images/bars-frame.png") no-repeat scroll -1px 0;
+    background: rgba(0, 0, 0, 0) url("/static/games/slots/rich-fruits/style/images/bars-frame.png") no-repeat scroll -1px 0;
     height: 461px;
     left: 0;
     overflow: hidden;
@@ -257,7 +257,7 @@ html, body{
     right: 0;
 }
 .sLL{
-    background: url("../../gates-of-avalon/style/images/lamps-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/gates-of-avalon/style/images/lamps-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     cursor: pointer;
     position: absolute;
 }
@@ -269,7 +269,7 @@ html, body{
     height: 39px;
 }
 .sLLACWR{
-    background: url("../../gates-of-avalon/style/images/lamps-sprite.png") no-repeat scroll 0 -900px rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/gates-of-avalon/style/images/lamps-sprite.png") no-repeat scroll 0 -900px rgba(0, 0, 0, 0);
 }
 .sLLAct .sLLACWR{
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -353,12 +353,12 @@ html, body{
 
 /* Double Panel */
 #gmbPWr{
-    background: rgba(0, 0, 0, 0) url("../../book-of-winners/style/images/gamble/back.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("/static/games/slots/book-of-winners/style/images/gamble/back.png") no-repeat scroll 0 0;
     height: 405px;
     width: 826px;
 }
 #gmbP{
-    background: rgba(0, 0, 0, 0) url("images/back-pattern.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("/static/games/slots/rich-fruits/style/images/back-pattern.png") repeat scroll 0 0;
     height: 100%;
     overflow: hidden;
     position: absolute;
@@ -451,14 +451,14 @@ html, body{
 
 #gmbChsBCStrWr,
 #gmbChsRCStrWr{
-    background: url("../../scatter-wins/style/images/gamble/colorBtnStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorBtnStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 100%;
     text-align: center;
     width: 100%;
 }
 .active #gmbChsRCStrWr:active,
 .active #gmbChsBCStrWr:active{
-    background: url("../../scatter-wins/style/images/gamble/colorBtnAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorBtnAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .active #gmbChsBCStrWr:active .gmbChsCStr,
@@ -533,24 +533,24 @@ html, body{
 
 }
 #gmbChsResC .c1{
-    background: url("../../scatter-wins/style/images/gamble/cardBig1.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig1.png") no-repeat scroll 0 0 transparent;
 }
 #gmbChsResC .c2{
-    background: url("../../scatter-wins/style/images/gamble/cardBig2.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig2.png") no-repeat scroll 0 0 transparent;
 }
 #gmbChsResC .c3{
-    background: url("../../scatter-wins/style/images/gamble/cardBig3.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig3.png") no-repeat scroll 0 0 transparent;
 }
 #gmbChsResC .c4{
-    background: url("../../scatter-wins/style/images/gamble/cardBig4.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig4.png") no-repeat scroll 0 0 transparent;
 }
 
 #gmbChsResCBack{}
 #gmbChsResCFront.su0{
-    background: url("../../scatter-wins/style/images/gamble/cardBig0.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig0.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 #gmbChsResCFront.su00{
-    background: url("../../scatter-wins/style/images/gamble/cardBig00.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/cardBig00.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .c0{}
 .su0{}
@@ -564,7 +564,7 @@ html, body{
 
 
 #gmbPB{
-    background: url("../../scatter-wins/style/images/gamble/prevCardsBackLayer.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/prevCardsBackLayer.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     bottom: 25px;
     height: 61px;
     left: 60px;
@@ -626,16 +626,16 @@ html, body{
     width: 32px;
 }
 .c1 .prevCardItemFrame{
-    background: url("../../scatter-wins/style/images/gamble/historyCardsSmallColor1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 }
 .c2 .prevCardItemFrame{
-    background: url("../../scatter-wins/style/images/gamble/historyCardsSmallColor2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 }
 .c3 .prevCardItemFrame{
-    background: url("../../scatter-wins/style/images/gamble/historyCardsSmallColor3.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor3.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 }
 .c4 .prevCardItemFrame{
-    background: url("../../scatter-wins/style/images/gamble/historyCardsSmallColor4.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/historyCardsSmallColor4.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 }
 .prevCardItemFrame{
     height: 61px;
@@ -651,7 +651,7 @@ html, body{
     position: absolute;
 }
 #smlBtnHrtsWr, #smlBtnDmndWr, #smlBtnClbsWr, #smlBtnSpdsWr{
-    background: url("../../scatter-wins/style/images/gamble/colorCardBackStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorCardBackStd.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     cursor: pointer;
     position: relative;
 }
@@ -659,14 +659,14 @@ html, body{
 .active #smlBtnDmndWr:hover,
 .active #smlBtnClbsWr:hover,
 .active #smlBtnSpdsWr:hover{
-    /*background: url("../../roll-of-ramses/style/images/gamble/suitBtnBackHov.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    /*background: url("/static/games/slots/roll-of-ramses/style/images/gamble/suitBtnBackHov.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
 }
 
 .active #smlBtnHrtsWr:active,
 .active #smlBtnDmndWr:active,
 .active #smlBtnClbsWr:active,
 .active #smlBtnSpdsWr:active{
-    background: url("../../scatter-wins/style/images/gamble/colorCardBackAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/colorCardBackAct.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 #smlBtnHrts .smlBtnChColDis,
 #smlBtnDmnd .smlBtnChColDis,
@@ -733,16 +733,16 @@ html, body{
 .smlBtnChColDis{}
 
 #smlBtnHrts .smlBtnChColStr{
-    background: url("../../scatter-wins/style/images/gamble/smallCardColor3.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor3.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
 }
 #smlBtnDmnd .smlBtnChColStr{
-    background: url("../../scatter-wins/style/images/gamble/smallCardColor4.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor4.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
 }
 #smlBtnClbs .smlBtnChColStr{
-    background: url("../../scatter-wins/style/images/gamble/smallCardColor2.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor2.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
 }
 #smlBtnSpds .smlBtnChColStr{
-    background: url("../../scatter-wins/style/images/gamble/smallCardColor1.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
+    background: url("/static/games/slots/scatter-wins/style/images/gamble/smallCardColor1.png") no-repeat scroll 27px 9px rgba(0, 0, 0, 0);
 }
 #gmbPWr .active .smlBtnChColStr:active{
     background-position: 30px 12px;
@@ -764,7 +764,7 @@ html, body{
     z-index: 3;
 }
 #fGPWr{
-    background: rgba(0, 0, 0, 0) url("../../golden-harvest/style/images/free-back.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("/static/games/slots/golden-harvest/style/images/free-back.png") no-repeat scroll 0 0;
     bottom: 0;
     height: 237px;
     position: absolute;

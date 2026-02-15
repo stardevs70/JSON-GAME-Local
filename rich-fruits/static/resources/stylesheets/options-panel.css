@@ -25,7 +25,7 @@
 }
 #optPanTop{
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAACBCAYAAAD5RSumAAABAElEQVRYhe3Yu1LDMBSE4X0FAsNwC5YUxzdMEvpgRBk80YwdxPu/yVLAUG8RulN83S/1Z3FxV1CBxYOjAuf/cfHoqcClC1Tgyq2owLUvqcCNX1OB21BRgftVRQWWZU0FlmVDBYqypQLFuqMCRfVEBVzVU4Gi7qmAq3sq4OpnKuDrDRXwzYYKhGZLBXy7pQK+3VGhh6HbUYHQvVBhoYUWWmihhRZaaKGFFlpo4b+G4hV3/gNSvl31a1i9r+WLXd4A5FVB3ynk5UPdUvR1Rt175AUpjie+HT85jDOHcWZMma8fE2PKHMaZ+8PE/WEiYsqMx8yYMt/T118cx9Pvo58PvgGmSmaFyUlcoAAAAABJRU5ErkJggg==") repeat-x scroll 0 0 transparent;
-    /*background: url("../images/options-panel/opt-pan-top-pattern.png") repeat-x scroll 0 0 transparent;*/
+    /*background: url("/static/resources/images/options-panel/opt-pan-top-pattern.png") repeat-x scroll 0 0 transparent;*/
     height: 129px;
     position: relative;
     text-align: center;
@@ -58,7 +58,7 @@
 .lngIcnWr,
 .lngIcn,
 .lngIcn:hover{
-    background: url("../images/options-panel/opts-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/resources/images/options-panel/opts-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 #optPanTop li{
@@ -149,7 +149,7 @@ body #gameOverlay .clear{
 
 
 #optPanClsBtn{
-    /*background: url("../images/buttons/opt-btn-back-std.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    /*background: url("/static/resources/images/buttons/opt-btn-back-std.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
     height: 91px;
     position: absolute;
     top: 25px;
@@ -157,7 +157,7 @@ body #gameOverlay .clear{
     right: 20px;
 }
 #optPanClsBtn:hover{
-	/*background: url("../images/buttons/opt-btn-back-hov.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+	/*background: url("/static/resources/images/buttons/opt-btn-back-hov.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
 }
 #optPanClsBtnStr{
     background-position: -149px -203px;
@@ -169,7 +169,7 @@ body #gameOverlay .clear{
 
 #optPanBot{
     /*background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABNklEQVQokWWTS7KFIAxE2RDy0Tu7CshP7/73029gErDewCqLSHK6OyobKlzs8LHDxY413fTeoPeCNd3YzhsmVJhQYUOFjx02VCgfO5ajYDmKFNZ0SUO9P+c2NKzpBg/Te4bigo8d2zmKNjS56GKjs4rP+ZPGihH4cYTsY4cJdZLxUMzfK0taPE0zRGKkWcPn/EHv+R+F2s576vigLkeBCVUMc+QLS3Tki/LEPz88jR13scGGijVdL3mKNbI+No+N2c4R3XKUVzM1YnoOuMjN5rw97QHrf7k9XM0iYUa1k5n6m8dlFxvWdNGUi9CaEHEqNjSRooazGUYWpE66m+A7ImMCtRyFdGXoPb+WgteR98BPkRleEv3NpK1Jro+EDEebxj64ySO1HIV+gCwxDfOaEHCdayZU/AG214Aay6Ai0QAAAABJRU5ErkJggg==") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
-    /*background: url("../images/options-panel/opt-pan-bot-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    /*background: url("/static/resources/images/options-panel/opt-pan-bot-pattern.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
     /*
     background: rgba(46, 61, 68, 0.75) none repeat scroll 0 0;
 	height: 100%;
@@ -406,7 +406,7 @@ body #gameOverlay .clear{
 .bSRightArrow,
 .active .bSMin,
 .active .bSPlus{
-    background: url("../images/options-panel/bets-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/resources/images/options-panel/bets-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .active .bSMin{
     background-position: 0 -265px;
@@ -655,7 +655,7 @@ body #gameOverlay .clear{
     color: white;
 }
 .lngFlag, #optItemLangIco{
-    background: url("../images/options-panel/flag/flags-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/static/resources/images/options-panel/flag/flags-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .alLng .lngFlag, #optItemLangIco.alLng{
     background-position: 0 0;

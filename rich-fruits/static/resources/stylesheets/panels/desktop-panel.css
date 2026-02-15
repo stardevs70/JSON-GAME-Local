@@ -22,7 +22,7 @@
 }
 #userMessage,#msgNoBtnWr, #msgYesBtnWr,
 #msgNoBtn:hover, #msgYesBtn:hover{
-    background: url("../../images/message/desc/user-msg-form.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/message/desc/user-msg-form.png") no-repeat scroll 0 0 transparent;
 }
 #userMessage{
     background-position: 0 0;
@@ -201,7 +201,7 @@
 .active .threeBtns:active,
 #gambleBtn.disabled .disBtn,
 #maxBetBtn.disabled .disBtn{
-    background: url("../../images/buttons/desk-bot-btn-sprite.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/resources/images/buttons/desk-bot-btn-sprite.png") no-repeat scroll 0 0 transparent;
 }
 .threeBtns{
     background-position: 0 0;
